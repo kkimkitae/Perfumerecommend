@@ -48,11 +48,6 @@ img파일 약 1.2기가 flask-3/static/   https://drive.google.com/file/d/1FU0sj
 selenium 라이브러리를 이용하여 웹 최대 규모 향수 사이트인 fragrantica를 대상으로 향수 데이터를 크롤링하였으며, 적당한 전처리 후 약 25000개의 데이터가 모였고, 
 약 24545개의 데이터를 데이터베이스에 적재하였습니다.
 
+## 5. front
 
-
-
-<br>
-
-홈화면
-
-<img width="830" alt="image" src="https://user-images.githubusercontent.com/85480964/180186908-ffc5d0b1-47a7-4a20-ab34-1d8472355241.png">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/85480964/180186908-ffc5d0b1-47a7-4a20-ab34-1d8472355241.png">
