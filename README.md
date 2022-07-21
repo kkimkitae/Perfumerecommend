@@ -15,4 +15,6 @@ img파일 약 1.2기가 flask-3/static/  https://drive.google.com/file/d/1FU0sj5
 • 구매자들에게 자신이 사용했던 향수를 검색하면 그 향수와 비슷한 향수를 찾을 수 있도록 도움
 
 
+홈화면
+
 <img width="830" alt="image" src="https://user-images.githubusercontent.com/85480964/180186908-ffc5d0b1-47a7-4a20-ab34-1d8472355241.png">
