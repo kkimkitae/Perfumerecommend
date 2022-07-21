@@ -37,8 +37,12 @@ img파일 약 1.2기가 flask-3/static/   https://drive.google.com/file/d/1FU0sj
 <img width="518" alt="image" src="https://user-images.githubusercontent.com/85480964/180190082-fd5ee387-ad5f-4c37-88e3-102ece4b3e82.png">
 
 ## 3. 알고리즘 설명
-<img width="400" alt="image" src="https://user-images.githubusercontent.com/85480964/180190171-ad2c8039-485d-4392-87af-cd9d966dd489.png">
-<img width="400" alt="image" src="https://user-images.githubusercontent.com/85480964/180190188-9fc097d7-0bc0-4354-b894-904f86fbfc86.png">
+<img width="350" alt="image" src="https://user-images.githubusercontent.com/85480964/180190171-ad2c8039-485d-4392-87af-cd9d966dd489.png">
+<img width="350" alt="image" src="https://user-images.githubusercontent.com/85480964/180190188-9fc097d7-0bc0-4354-b894-904f86fbfc86.png">
+웹은 사용자에게 4가지 질문을 던집니다. 향을 대표하는 개념인 메인 어코드, 지속성, 브랜드의 유명도, 향수의 계절감에 관한 것으로 사용자가 각 질문 별로 원하는 특성을 고르게 됩니다. 본 과정을 통해 사용자의 취향을 알아내게 됩니다.
+질문을 통해 얻은 결과를 벡터화하여 cbf알고리즘의 input으로 사용합니다. 
+input vector와 저희가 데이터베이스에 가지고 있는 향수 데이터의 코사인 유사도를 계산하고 가중평점을 이용해 다시 정렬한 다음 3개의 집단으로 clustering하여 각 집단 별로 random하게 보여주는 방식을 사용해 사용자는 본인 취향의 다양한 향수를 볼 수 있게 됩니다.
+
 
 ## 4. 데이터 수집 과정
 <img width="350" alt="image" src="https://user-images.githubusercontent.com/85480964/180190575-e9c1c236-339f-4819-b3c2-9fe916cddb35.png">
