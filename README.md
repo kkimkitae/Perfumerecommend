@@ -33,6 +33,11 @@ img파일 약 1.2기가 flask-3/static/   https://drive.google.com/file/d/1FU0sj
 ## 2. 이용 아키텍처
 <img width="518" alt="image" src="https://user-images.githubusercontent.com/85480964/180190082-fd5ee387-ad5f-4c37-88e3-102ece4b3e82.png">
 
+## 3. 알고리즘 설명
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/85480964/180190171-ad2c8039-485d-4392-87af-cd9d966dd489.png">
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/85480964/180190188-9fc097d7-0bc0-4354-b894-904f86fbfc86.png">
+
+
 
 
 
