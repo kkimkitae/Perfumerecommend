@@ -8,7 +8,10 @@ img파일 약 1.2기가 flask-3/static/   https://drive.google.com/file/d/1FU0sj
 
 <hr>
 
-<img width="311" alt="image" src="https://user-images.githubusercontent.com/85480964/180188576-288c8a72-21a9-4d29-8877-3a954f1ccf70.png">
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/85480964/180188576-288c8a72-21a9-4d29-8877-3a954f1ccf70.png">
+
+봄:향은 크게 네가지 서비스를 제공합니다. 
+답변을 통한 향수 추천받기, 향수 초심자에게 낯선 용어들이 정리된 향수 용어 사전, 향수 검색하기, 향수 명을 입력하면 비슷한 향수를 추천받는 비슷한 향수 찾기입니다. 
 
 
 ## 0. 팀 소개
