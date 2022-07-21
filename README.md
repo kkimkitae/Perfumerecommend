@@ -3,15 +3,16 @@
 
 유명 향수 사이트 프라그란티카 크롤링을 활용한 향수 추천 프로젝트
 
-시연 영상 https://youtu.be/gnfD5Lw2DHQ
-
-img파일 약 1.2기가 flask-3/static/   https://drive.google.com/file/d/1FU0sj5oh_B_kFGHHBzxfdkJskVd0UuAa/view?usp=sharing
 
 • 단순 01벡터가 아닌 연속된 값을 반영
 
 • 가중평점을 활용한 의미 있는 추천 
 
 • 결과군집화를통한CBF한계보완
+
+시연 영상 https://youtu.be/gnfD5Lw2DHQ
+
+img파일 약 1.2기가 flask-3/static/   https://drive.google.com/file/d/1FU0sj5oh_B_kFGHHBzxfdkJskVd0UuAa/view?usp=sharing
 
 <hr>
 
