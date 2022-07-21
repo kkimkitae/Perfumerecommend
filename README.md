@@ -59,4 +59,15 @@ selenium 라이브러리를 이용하여 웹 최대 규모 향수 사이트인 f
 봄:향은 크게 네가지 서비스를 제공합니다. 
 답변을 통한 향수 추천받기, 향수 초심자에게 낯선 용어들이 정리된 향수 용어 사전, 향수 검색하기, 향수 명을 입력하면 비슷한 향수를 추천받는 비슷한 향수 찾기입니다. 
 
+메인페이지
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/85480964/180186908-ffc5d0b1-47a7-4a20-ab34-1d8472355241.png">
+
+향수로 향수 추천 받기
+<img width="629" alt="image" src="https://user-images.githubusercontent.com/85480964/180196775-dec651f0-d595-4ff9-a906-711a117843c0.png">
+
+향수 검색 하기
+<img width="610" alt="image" src="https://user-images.githubusercontent.com/85480964/180196820-3bd4d356-d697-4ff5-9425-685f2e7c79ce.png">
+
+향수 용어 사전
+<img width="403" alt="image" src="https://user-images.githubusercontent.com/85480964/180196899-c03ca77f-d394-4617-a286-49365b790559.png">
+
