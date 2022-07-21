@@ -110,6 +110,9 @@ selenium 라이브러리를 이용하여 웹 최대 규모 향수 사이트인 f
 
 <img width="360" alt="image" src="https://user-images.githubusercontent.com/85480964/180200039-1f4a82fd-6e5d-4945-8849-a9354168ebc1.png">
 
+<img width="360" alt="image" src="https://user-images.githubusercontent.com/85480964/180201483-43a1eac3-b619-407b-9574-effc7c2938a8.png">
+
+
 cbf의 약점을 피하기 위하여 클러스터링 후 random 추출을 진행하였으며,
 유사도 상위 93%를 대상으로 가중평점을 적용하여 재정렬한 향수를 대상으로 3개의 그룹으로 그룹화 한 뒤, 군집 별 추천을 하게 했습니다.
 
