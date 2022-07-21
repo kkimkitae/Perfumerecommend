@@ -2,6 +2,7 @@
 프라그란티카 사이트를 크롤링한 향수 추천 프로젝트
 
 
+
 img파일 약 1.2기가 flask-3/static/   https://drive.google.com/file/d/1FU0sj5oh_B_kFGHHBzxfdkJskVd0UuAa/view?usp=sharing
 
 
@@ -28,6 +29,11 @@ img파일 약 1.2기가 flask-3/static/   https://drive.google.com/file/d/1FU0sj
 • 향수가 부담스러운 사람들에게 직 접 시향을 하지 않아도 선택할 수 있음
 
 • 구매자들에게 자신이 사용했던 향수를 검색하면 그 향수와 비슷한 향수를 찾을 수 있도록 도움
+
+## 2. 이용 아키텍처
+<img width="518" alt="image" src="https://user-images.githubusercontent.com/85480964/180190082-fd5ee387-ad5f-4c37-88e3-102ece4b3e82.png">
+
+
 
 
 홈화면
