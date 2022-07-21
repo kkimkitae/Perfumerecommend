@@ -105,6 +105,11 @@ selenium 라이브러리를 이용하여 웹 최대 규모 향수 사이트인 f
  
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/85480964/180198433-2e3ea52c-6933-4f28-895d-f8bd3e3b5a63.png">
 
+ • 5 결과화면 
+ 
+<img width="405" alt="image" src="https://user-images.githubusercontent.com/85480964/180201700-6659abde-97d5-4ee8-bc23-e230d468f09f.png">
+
+
 
 ## 6. Back
 
