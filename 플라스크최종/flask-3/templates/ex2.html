@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <title>향수 추천 결과</title>
+    <style>
+        h2 {text-align : center;}
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-4" id="first">
+            <h3>{{first.perfume_name}}<span>for {{first.gender}}</span> <span>{{first.brand}}</span></h3>
+            <ul>
+                <li>main accords</li>
+                <li>{{first.main_accord1}}</li>
+                <li>{{first.main_accord2}}</li>
+                <li>{{first.main_accord3}}</li>
+            </ul>
+        </div>
+        <div class="col-4" id="second">
+            <h3>{{second.perfume_name}}<span>for {{second.gender}}</span> <span>{{second.brand}}</span></h3>
+            <ul>
+                <li>main accords</li>
+                <li>{{second.main_accord1}}</li>
+                <li>{{second.main_accord2}}</li>
+                <li>{{second.main_accord3}}</li>
+            </ul>
+        </div>
+        <div class="col-4" id="third">
+            <h3>{{third.perfume_name}}<span>for {{third.gender}}</span> <span>{{third.brand}}</span></h3>
+            <ul>
+                <li>main accords</li>
+                <li>{{third.main_accord1}}</li>
+                <li>{{third.main_accord2}}</li>
+                <li>{{third.main_accord3}}</li>
+            </ul>
+        </div>
+    </div>
+
+    <form action="/recommended_result/re" method="get">
+        <button type = "submit">다른 결과 보기</button>
+    </form><br>
+
+    <form action="/to_home" method="get">
+        <button type = "submit">Home으로 가기</button>
+    </form>
+</body>
+</html>

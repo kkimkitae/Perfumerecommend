@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>향수 추천</title>
+    <meta name="description" content="Core HTML Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/lightcase/lightcase.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link href="https://file.myfontastic.com/7vRKgqrN3iFEnLHuqYhYuL/icons.css" rel="stylesheet">
+
+    <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+</head>
+<body data-spy="scroll" data-target="#navbar-nav-header" class="static-layout">
+	<div class="boxed-page">
+		<nav id="gtco-header-navbar" class="navbar navbar-expand-lg py-4">
+    <div class="container">
+    </div>
+
+	<div class="jumbotron d-flex align-items-center" style="background-image: url(static/img/44.jpeg)">
+  <div class="container text-center">
+    <h3><strong>Q 1 - 3 </strong>  : 세번째로 선호하는 향을 하나만 골라주세요!</h3>
+    <style>
+      h3 {text-align : center;}
+  </style>
+    <form action="/recommend_brand_value" method="post">
+
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        {% if too_many %}
+            <p class="alert alert-danger" >향은 한 개만 입력해주세요!!!</p>
+        {% elif no_input %}
+            <p class="alert alert-danger"  >원하는 향을 입력하셔야 됩니다!!</p>
+        {% elif duplicated %}
+            <p class="alert alert-danger"  >향이 중복되었습니다!!</p>   
+        {% endif %}
+
+        <h4><img src="static/img/a1.jpeg"></h4> 
+        <p>감귤, 오렌지, 레몬, 유자, 라임, 자몽 등의 과일의 향</p>
+        <label for="CITRUS SMELLS"></label> 
+        <select name = "scent" id="CITRUS SMELLS">
+          <option value="">--원하는 향을 골라주세요!!--</option>
+          <option value="CITRUSSMELLS_1">citrus</option> 
+        </select> 
+
+
+        <div class="help-tip">
+          <p>citrus : 과일 내음과 약간은 꽃내음이 나며
+            신선하고 상큼하면서 동시에 달콤한 느낌의 향</p>
+        </div>
+         <br>
+         
+        <style type='text/css'> 
+        .help-tip{
+          display: inline-block;
+          top: 18px;
+          right: 18px;
+          text-align: center;
+          background-color: #BCDBEA;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          font-size: 14px;
+          line-height: 26px;
+          cursor: default;
+        }
+         
+        .help-tip:before{
+          content:'?';
+          font-weight: bold;
+          color:#fff;
+        }
+         
+        .help-tip:hover p{
+          display:block;
+          transform-origin: 100% 0%;
+         
+          -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
+         
+        }
+         
+        .help-tip p{
+          display: none;
+          text-align: left;
+          background-color: #1E2021;
+          padding: 20px;
+          width: 300px;
+          position: absolute;
+          border-radius: 3px;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+          right: -4px;
+          color: #FFF;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+         
+        .help-tip p:before{
+          position: absolute;
+          content: '';
+          width:0;
+          height: 0;
+          border:6px solid transparent;
+          border-bottom-color:#1E2021;
+          right:10px;
+          top:-12px;
+        }
+         
+        .help-tip p:after{
+          width:100%;
+          height:40px;
+          content:'';
+          position: absolute;
+          top:-40px;
+          left:0;
+        }
+         
+        @-webkit-keyframes fadeIn {
+          0% { 
+            opacity:0; 
+            transform: scale(0.6);
+          }
+         
+          100% {
+            opacity:100%;
+            transform: scale(1);
+          }
+        }
+         
+        @keyframes fadeIn {
+          0% { opacity:0; }
+          100% { opacity:100%; }
+        }​ 
+        </style> 
+        <br><br>
+        
+
+
+        <h4><img src="static/img/a2.jpeg"></h4>
+        <p>시트러스를 제외한 과일, 야채, 견과류를 포함하는 향</p>
+        <label for="FRUITS, VEGETABLES AND NUTS"></label> 
+        <select name = "scent" id="FRUITS, VEGETABLES AND NUTS">
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="FRUITSVEGETABLESANDNUTS_1">fruity</option>
+            <option value="FRUITSVEGETABLESANDNUTS_2">coconut</option>
+            <option value="FRUITSVEGETABLESANDNUTS_3">cherry</option>
+            <option value="FRUITSVEGETABLESANDNUTS_4">tropical</option>
+            <option value="FRUITSVEGETABLESANDNUTS_5">almond</option>
+            <option value="FRUITSVEGETABLESANDNUTS_6">nutty</option>
+            <option value="FRUITSVEGETABLESANDNUTS_7">sour</option>
+            <option value="FRUITSVEGETABLESANDNUTS_8">conifer</option>
+        </select>
+        <div class="help-tip1">
+          <p>fruity : 다양한 열대과일을 이용하여 상큼하고 달콤한 과일 향<br>coconut : 달콤함이 느껴지는 진한 코코넛 향<br>cherry : 달콤하면서도 시큼한 동시에 특징적인 향
+            <br>tropical : 시원하고 달콤한 열대 과일 주스처럼 활력을 넣어주는 트로피컬 향<br>almond : 씁쓸하면서도 달콤한 향 <br>nutty : 볶은 견과류 향
+            <br>sour : 시큼한 향<br>conifer : 상쾌한 향</p>
+        </div>
+        <br>
+         
+        <style type='text/css'> 
+        .help-tip1{
+          display: inline-block;
+          top: 18px;
+          right: 18px;
+          text-align: center;
+          background-color: #BCDBEA;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          font-size: 14px;
+          line-height: 26px;
+          cursor: default;
+        }
+         
+        .help-tip1:before{
+          content:'?';
+          font-weight: bold;
+          color:#fff;
+        }
+         
+        .help-tip1:hover p{
+          display:block;
+          transform-origin: 100% 0%;
+         
+          -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
+         
+        }
+         
+        .help-tip1 p{
+          display: none;
+          text-align: left;
+          background-color: #1E2021;
+          padding: 20px;
+          width: 300px;
+          position: absolute;
+          border-radius: 3px;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+          right: -4px;
+          color: #FFF;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+         
+        .help-tip1 p:before{
+          position: absolute;
+          content: '';
+          width:0;
+          height: 0;
+          border:6px solid transparent;
+          border-bottom-color:#1E2021;
+          right:10px;
+          top:-12px;
+        }
+         
+        .help-tip1 p:after{
+          width:100%;
+          height:40px;
+          content:'';
+          position: absolute;
+          top:-40px;
+          left:0;
+        }
+         
+        @-webkit-keyframes fadeIn {
+          0% { 
+            opacity:0; 
+            transform: scale(0.6);
+          }
+         
+          100% {
+            opacity:100%;
+            transform: scale(1);
+          }
+        }
+         
+        @keyframes fadeIn {
+          0% { opacity:0; }
+          100% { opacity:100%; }
+        }​ 
+        </style> 
+        <br><br>
+                
+        <h4><img src="static/img/a3.jpeg"></h4>
+        <p>장미, 재스민, 라일락, 카네이션,튜버로즈,히아신스,네롤리,바이올렛, 수선화 향</p>
+        <label for="FLOWERS"></label> 
+        <select name = "scent" id="FLOWERS">
+          <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="FLOWERS_1">iris</option>
+            <option value="FLOWERS_2">floral</option>
+            <option value="FLOWERS_3">lavender</option>
+            <option value="FLOWERS_4">rose</option>
+            <option value="FLOWERS_5">violet</option>
+            <option value="FLOWERS_6">tuberose</option>
+            <option value="FLOWERS_7">aldehydic</option>
+        </select>
+        <div class="help-tip2">
+          <p>iris : 바이올렛 플라워를 연상시키는 파운더리한 플로럴 향<br>floral : 꽃의 향수, 실급 타입부터 부케 타입까지 수수함과 화려한 향 <br>lavender : 포근하고 아늑한 느낌의 향<br>rose : 은은하면서 향기로운 장미향<br>violet : 스윗함과 파우더리함을 지닌 향<br>tuberose : 은은하면서 차분한 향<br>aldehydic : 신선한 바람과 같은 향</p>
+        </div>
+        <br>
+         
+        <style type='text/css'> 
+        .help-tip2{
+          display: inline-block;
+          top: 18px;
+          right: 18px;
+          text-align: center;
+          background-color: #BCDBEA;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          font-size: 14px;
+          line-height: 26px;
+          cursor: default;
+        }
+         
+        .help-tip2:before{
+          content:'?';
+          font-weight: bold;
+          color:#fff;
+        }
+         
+        .help-tip2:hover p{
+          display:block;
+          transform-origin: 100% 0%;
+         
+          -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
+         
+        }
+         
+        .help-tip2 p{
+          display: none;
+          text-align: left;
+          background-color: #1E2021;
+          padding: 20px;
+          width: 300px;
+          position: absolute;
+          border-radius: 3px;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+          right: -4px;
+          color: #FFF;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+         
+        .help-tip2 p:before{
+          position: absolute;
+          content: '';
+          width:0;
+          height: 0;
+          border:6px solid transparent;
+          border-bottom-color:#1E2021;
+          right:10px;
+          top:-12px;
+        }
+         
+        .help-tip2 p:after{
+          width:100%;
+          height:40px;
+          content:'';
+          position: absolute;
+          top:-40px;
+          left:0;
+        }
+         
+        @-webkit-keyframes fadeIn {
+          0% { 
+            opacity:0; 
+            transform: scale(0.6);
+          }
+         
+          100% {
+            opacity:100%;
+            transform: scale(1);
+          }
+        }
+         
+        @keyframes fadeIn {
+          0% { opacity:0; }
+          100% { opacity:100%; }
+        }​ 
+        </style> 
+        <br><br>
+
+        <h4><img src="static/img/a4.jpeg"></h4>
+        <p> 자스민, 가드니아, 튜베로즈를 연상시키는 묵직한 꽃 향</p>
+        <label for="WHITE FLOWERS"></label> 
+        <select name = "scent" id="WHITE FLOWERS"></option>
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="WHITEFLOWERS_1">white floral</option>
+            <option value="WHITEFLOWERS_2">yellow floral</option>
+        </select>
+        <div class="help-tip3">
+          <p>white floral : 새하얗고 두터운 꽃잎을 꼭 닮은 벨벳과 같이 풍부하고 크리미한 향
+<br>yellow floral : 전체적으로 부드러운 향</p>
+        </div>
+         
+        <br>
+        <style type='text/css'> 
+        .help-tip3{
+          display: inline-block;
+          top: 18px;
+          right: 18px;
+          text-align: center;
+          background-color: #BCDBEA;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          font-size: 14px;
+          line-height: 26px;
+          cursor: default;
+        }
+         
+        .help-tip3:before{
+          content:'?';
+          font-weight: bold;
+          color:#fff;
+        }
+         
+        .help-tip3:hover p{
+          display:block;
+          transform-origin: 100% 0%;
+         
+          -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
+         
+        }
+         
+        .help-tip3 p{
+          display: none;
+          text-align: left;
+          background-color: #1E2021;
+          padding: 20px;
+          width: 300px;
+          position: absolute;
+          border-radius: 3px;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+          right: -4px;
+          color: #FFF;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+         
+        .help-tip3 p:before{
+          position: absolute;
+          content: '';
+          width:0;
+          height: 0;
+          border:6px solid transparent;
+          border-bottom-color:#1E2021;
+          right:10px;
+          top:-12px;
+        }
+         
+        .help-tip3 p:after{
+          width:100%;
+          height:40px;
+          content:'';
+          position: absolute;
+          top:-40px;
+          left:0;
+        }
+         
+        @-webkit-keyframes fadeIn {
+          0% { 
+            opacity:0; 
+            transform: scale(0.6);
+          }
+         
+          100% {
+            opacity:100%;
+            transform: scale(1);
+          }
+        }
+         
+        @keyframes fadeIn {
+          0% { opacity:0; }
+          100% { opacity:100%; }
+        }​ 
+        </style>
+        <br><br>
+
+        <h4><img src="static/img/a5.jpeg"></h4>
+        <p>풀과 허브, 담뱃잎의 향</p>
+        <label for="GREENS, HERBS AND FOUGERES"></label> 
+        <select name = "scent" id="GREENS, HERBS AND FOUGERES">
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="GREENSHERBSANDFOUGERES_1">tobacco</option>
+            <option value="GREENSHERBSANDFOUGERES_2">green</option>
+            <option value="GREENSHERBSANDFOUGERES_3">aromatic</option>
+            <option value="GREENSHERBSANDFOUGERES_4">cannabis</option>
+            <option value="GREENSHERBSANDFOUGERES_5">bitter</option>
+        </select>
+        <div class="help-tip4">
+          <p>tobacco : 건초의 향과 함께 풍부하고 뉘앙스의 따뜻하고 달콤한 허브 향<br>green : 막 베어낸 풀이나, 나뭇잎을 비볐을 때의 향<br>aromatic : 신선하고 깔끔한 느낌의 향<br>cannabis : 더러운 시큼한 뉘앙스가 있는 향
+            <br>bitter : 씁슬하고 쓴 향</p>
+        </div>
+        <br>
+         
+        <style type='text/css'> 
+        .help-tip4{
+          display: inline-block;
+          top: 18px;
+          right: 18px;
+          text-align: center;
+          background-color: #BCDBEA;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          font-size: 14px;
+          line-height: 26px;
+          cursor: default;
+        }
+         
+        .help-tip4:before{
+          content:'?';
+          font-weight: bold;
+          color:#fff;
+        }
+         
+        .help-tip4:hover p{
+          display:block;
+          transform-origin: 100% 0%;
+         
+          -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
+         
+        }
+         
+        .help-tip4 p{
+          display: none;
+          text-align: left;
+          background-color: #1E2021;
+          padding: 20px;
+          width: 300px;
+          position: absolute;
+          border-radius: 3px;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+          right: -4px;
+          color: #FFF;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+         
+        .help-tip4 p:before{
+          position: absolute;
+          content: '';
+          width:0;
+          height: 0;
+          border:6px solid transparent;
+          border-bottom-color:#1E2021;
+          right:10px;
+          top:-12px;
+        }
+         
+        .help-tip4 p:after{
+          width:100%;
+          height:40px;
+          content:'';
+          position: absolute;
+          top:-40px;
+          left:0;
+        }
+         
+        @-webkit-keyframes fadeIn {
+          0% { 
+            opacity:0; 
+            transform: scale(0.6);
+          }
+         
+          100% {
+            opacity:100%;
+            transform: scale(1);
+          }
+        }
+         
+        @keyframes fadeIn {
+          0% { opacity:0; }
+          100% { opacity:100%; }
+        }​ 
+        </style>
+        <br><br>
+
+        <h4><img src="static/img/a6.jpeg"></h4>
+        <p>계피, 후추, 정향, 고수풀, 생강, 커피같은 천연 향신료의 향</p>
+        <label for="SPICES"></label> 
+        <select name = "scent" id="SPICES">
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="SPICES_1">warm spicy</option>
+            <option value="SPICES_2">vanilla</option>
+            <option value="SPICES_3">fresh spicy</option>
+            <option value="SPICES_4">soft spicy</option>
+            <option value="SPICES_5">cinnamon</option>
+            <option value="SPICES_6">coffee</option>
+            <option value="SPICES_7">cacao</option>
+            <option value="SPICES_8">anis</option>
+            <option value="SPICES_9">oily</option>
+        </select>
+        <div class="help-tip5">
+          <p>warm spicy : 클로브,시나몬,페퍼와 같은 자극적인 향<br>vanilla : 달달하며 부드럽고 은은한 향<br>fresh spicy : 생허브잎같이 쏘는 듯한 향<br>cinnamon : 달콤하고 따뜻하며 가루 같은 끈끈한 매운향
+            <br>coffe : 커피의 맛있는 향<br>cacao : 앰버, 발사믹 뉘앙스가 있는 따뜻하고 스파이시한 향<br>anis : 감초를 연상시키는 아네톨이 풍부한 향
+            <br>oily : 기름 향</p>
+        </div>
+        <br>
+         
+        <style type='text/css'> 
+        .help-tip5{
+          display: inline-block;
+          top: 18px;
+          right: 18px;
+          text-align: center;
+          background-color: #BCDBEA;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          font-size: 14px;
+          line-height: 26px;
+          cursor: default;
+        }
+         
+        .help-tip5:before{
+          content:'?';
+          font-weight: bold;
+          color:#fff;
+        }
+         
+        .help-tip5:hover p{
+          display:block;
+          transform-origin: 100% 0%;
+         
+          -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
+         
+        }
+         
+        .help-tip5 p{
+          display: none;
+          text-align: left;
+          background-color: #1E2021;
+          padding: 20px;
+          width: 300px;
+          position: absolute;
+          border-radius: 3px;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+          right: -4px;
+          color: #FFF;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+         
+        .help-tip5 p:before{
+          position: absolute;
+          content: '';
+          width:0;
+          height: 0;
+          border:6px solid transparent;
+          border-bottom-color:#1E2021;
+          right:10px;
+          top:-12px;
+        }
+         
+        .help-tip5 p:after{
+          width:100%;
+          height:40px;
+          content:'';
+          position: absolute;
+          top:-40px;
+          left:0;
+        }
+         
+        @-webkit-keyframes fadeIn {
+          0% { 
+            opacity:0; 
+            transform: scale(0.6);
+          }
+         
+          100% {
+            opacity:100%;
+            transform: scale(1);
+          }
+        }
+         
+        @keyframes fadeIn {
+          0% { opacity:0; }
+          100% { opacity:100%; }
+        }​ 
+        </style>
+        <br><br>
+
+        <h4><img src="static/img/a7.jpeg"></h4>
+        <p>초콜릿, 생크림, 캐러멜 향부터 마카롱, 크렘 브륄레같은 달달한 디저트 향</p>
+        <label for="SWEETS AND GOURMAND SMELLS"></label> 
+        <select name = "scent" id="SWEETS AND GOURMAND SMELLS">
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="SWEETSANDGOURMANDSMELLS_1">sweet</option>
+            <option value="SWEETSANDGOURMANDSMELLS_2">chocolate</option>
+            <option value="SWEETSANDGOURMANDSMELLS_3">honey</option>
+            <option value="SWEETSANDGOURMANDSMELLS_4">caramel</option>
+        </select>
+        <div class="help-tip6">
+          <p>sweet : 폭신하고 편안한 향<br>chocolate : 진하고 신선하면서 달콤한 향<br>honey : 그윽하고 깊은 향을 가진 허니 향<br>caramel : 관능적이며 풍부하고 크리미한 버터 같은 향
+            </p>
+        </div>
+        <br>
+         
+        <style type='text/css'> 
+        .help-tip6{
+          display: inline-block;
+          top: 18px;
+          right: 18px;
+          text-align: center;
+          background-color: #BCDBEA;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          font-size: 14px;
+          line-height: 26px;
+          cursor: default;
+        }
+         
+        .help-tip6:before{
+          content:'?';
+          font-weight: bold;
+          color:#fff;
+        }
+         
+        .help-tip6:hover p{
+          display:block;
+          transform-origin: 100% 0%;
+         
+          -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
+         
+        }
+         
+        .help-tip6 p{
+          display: none;
+          text-align: left;
+          background-color: #1E2021;
+          padding: 20px;
+          width: 300px;
+          position: absolute;
+          border-radius: 3px;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+          right: -4px;
+          color: #FFF;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+         
+        .help-tip6 p:before{
+          position: absolute;
+          content: '';
+          width:0;
+          height: 0;
+          border:6px solid transparent;
+          border-bottom-color:#1E2021;
+          right:10px;
+          top:-12px;
+        }
+         
+        .help-tip6 p:after{
+          width:100%;
+          height:40px;
+          content:'';
+          position: absolute;
+          top:-40px;
+          left:0;
+        }
+         
+        @-webkit-keyframes fadeIn {
+          0% { 
+            opacity:0; 
+            transform: scale(0.6);
+          }
+         
+          100% {
+            opacity:100%;
+            transform: scale(1);
+          }
+        }
+         
+        @keyframes fadeIn {
+          0% { opacity:0; }
+          100% { opacity:100%; }
+        }​ 
+        </style>
+        <br><br>
+
+        <h4><img src="static/img/a8.jpeg"></h4>
+        <p>숲은 연상시키는 나무와 이끼 계열 향 </p>
+        <label for="WOODS AND MOSSES"></label> 
+        <select name = "scent" id="WOODS AND MOSSES">
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="WOODSANDMOSSES_1">woody</option>
+            <option value="WOODSANDMOSSES_2">patchouli</option>
+            <option value="WOODSANDMOSSES_3">oud</option>
+        </select>
+        <div class="help-tip7">
+          <p>woody : 나무껍질, 향목 등 나무를 연상시키는 향<br>parchouli : 나무 냄새, 흙 냄새 비슷한 우디 향<br>oud : 나무 향뿐만 아니라 열매와 고소한 향 
+            </p>
+        </div>
+        <br>
+         
+        <style type='text/css'> 
+        .help-tip7{
+          display: inline-block;
+          top: 18px;
+          right: 18px;
+          text-align: center;
+          background-color: #BCDBEA;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          font-size: 14px;
+          line-height: 26px;
+          cursor: default;
+        }
+         
+        .help-tip7:before{
+          content:'?';
+          font-weight: bold;
+          color:#fff;
+        }
+         
+        .help-tip7:hover p{
+          display:block;
+          transform-origin: 100% 0%;
+         
+          -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
+         
+        }
+         
+        .help-tip7 p{
+          display: none;
+          text-align: left;
+          background-color: #1E2021;
+          padding: 20px;
+          width: 300px;
+          position: absolute;
+          border-radius: 3px;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+          right: -4px;
+          color: #FFF;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+         
+        .help-tip7 p:before{
+          position: absolute;
+          content: '';
+          width:0;
+          height: 0;
+          border:6px solid transparent;
+          border-bottom-color:#1E2021;
+          right:10px;
+          top:-12px;
+        }
+         
+        .help-tip7 p:after{
+          width:100%;
+          height:40px;
+          content:'';
+          position: absolute;
+          top:-40px;
+          left:0;
+        }
+         
+        @-webkit-keyframes fadeIn {
+          0% { 
+            opacity:0; 
+            transform: scale(0.6);
+          }
+         
+          100% {
+            opacity:100%;
+            transform: scale(1);
+          }
+        }
+         
+        @keyframes fadeIn {
+          0% { opacity:0; }
+          100% { opacity:100%; }
+        }​ 
+        </style>
+        <br><br>
+
+
+        <h4><img src="static/img/a9.jpeg"></h4>
+        <p>나무 진액같이 묵직하고 진한 향</p>
+        <label for="RESINS AND BALSAMS"></label> 
+        <select name = "scent" id="RESINS AND BALSAMS">
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="RESINSANDBALSAMS_1">balsamic</option>
+            <option value="RESINSANDBALSAMS_2">rubber</option>
+        </select>
+        <div class="help-tip8">
+          <p>balsamic : 풍성하고 복합적인 발삼 노트 향<br>rubber : 은은하고 묵직한 고무 향
+            </p>
+        </div>
+        <br>
+         
+        <style type='text/css'> 
+        .help-tip8{
+          display: inline-block;
+          top: 18px;
+          right: 18px;
+          text-align: center;
+          background-color: #BCDBEA;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          font-size: 14px;
+          line-height: 26px;
+          cursor: default;
+        }
+         
+        .help-tip8:before{
+          content:'?';
+          font-weight: bold;
+          color:#fff;
+        }
+         
+        .help-tip8:hover p{
+          display:block;
+          transform-origin: 100% 0%;
+         
+          -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
+         
+        }
+         
+        .help-tip8 p{
+          display: none;
+          text-align: left;
+          background-color: #1E2021;
+          padding: 20px;
+          width: 300px;
+          position: absolute;
+          border-radius: 3px;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+          right: -4px;
+          color: #FFF;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+         
+        .help-tip8 p:before{
+          position: absolute;
+          content: '';
+          width:0;
+          height: 0;
+          border:6px solid transparent;
+          border-bottom-color:#1E2021;
+          right:10px;
+          top:-12px;
+        }
+         
+        .help-tip8 p:after{
+          width:100%;
+          height:40px;
+          content:'';
+          position: absolute;
+          top:-40px;
+          left:0;
+        }
+         
+        @-webkit-keyframes fadeIn {
+          0% { 
+            opacity:0; 
+            transform: scale(0.6);
+          }
+         
+          100% {
+            opacity:100%;
+            transform: scale(1);
+          }
+        }
+         
+        @keyframes fadeIn {
+          0% { opacity:0; }
+          100% { opacity:100%; }
+        }​ 
+        </style>
+        <br><br>
+
+        <h4><img src="static/img/a10.jpeg"></h4>
+        <p>따뜻한, 파우더리한, 에로틱한, 약간의 애니멀릭한 향</p>
+        <label for="MUSK, AMBER, ANIMALIC SMELLS"></label> 
+        <select name = "scent" id="MUSK, AMBER, ANIMALIC SMELLS">
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="MUSKAMBERANIMALICSMELLS_1">leather</option>
+            <option value="MUSKAMBERANIMALICSMELLS_2">amber</option>
+            <option value="MUSKAMBERANIMALICSMELLS_3">musky</option>
+            <option value="MUSKAMBERANIMALICSMELLS_4">mossy</option>
+            <option value="MUSKAMBERANIMALICSMELLS_5">animalic</option>
+            <option value="MUSKAMBERANIMALICSMELLS_6">lactonic</option>
+            <option value="MUSKAMBERANIMALICSMELLS_7">beeswax</option>
+        </select>
+        <div class="help-tip9">
+          <p>leather : 일반적으로 자작나무 타르 또는 합성 이소퀴놀린에 의해 렌더링 향<br>amber : 달콤하고 수지 같으며 아늑하고 따뜻한 향<br>mossy : 축축한 이끼, 살짝 젖어있는 대지 등을 연상하는 향<br>animalic : 관능적이고 섹시한 느낌을 주는 향
+            <br>lactonic : 빡빡하고 깨끗한 느낌 향<br>beeswax : 강렬한 허니 뉘앙스가 있는 깊고 향긋한 앰버 향
+            </p>
+        </div>
+        <br>
+         
+        <style type='text/css'> 
+        .help-tip9{
+          display: inline-block;
+          top: 18px;
+          right: 18px;
+          text-align: center;
+          background-color: #BCDBEA;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          font-size: 14px;
+          line-height: 26px;
+          cursor: default;
+        }
+         
+        .help-tip9:before{
+          content:'?';
+          font-weight: bold;
+          color:#fff;
+        }
+         
+        .help-tip9:hover p{
+          display:block;
+          transform-origin: 100% 0%;
+         
+          -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
+         
+        }
+         
+        .help-tip9 p{
+          display: none;
+          text-align: left;
+          background-color: #1E2021;
+          padding: 20px;
+          width: 300px;
+          position: absolute;
+          border-radius: 3px;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+          right: -4px;
+          color: #FFF;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+         
+        .help-tip9 p:before{
+          position: absolute;
+          content: '';
+          width:0;
+          height: 0;
+          border:6px solid transparent;
+          border-bottom-color:#1E2021;
+          right:10px;
+          top:-12px;
+        }
+         
+        .help-tip9 p:after{
+          width:100%;
+          height:40px;
+          content:'';
+          position: absolute;
+          top:-40px;
+          left:0;
+        }
+         
+        @-webkit-keyframes fadeIn {
+          0% { 
+            opacity:0; 
+            transform: scale(0.6);
+          }
+         
+          100% {
+            opacity:100%;
+            transform: scale(1);
+          }
+        }
+         
+        @keyframes fadeIn {
+          0% { opacity:0; }
+          100% { opacity:100%; }
+        }​ 
+        </style>
+        <br><br>
+
+        <h4><img src="static/img/a11.jpeg"></h4>
+        <p>콜라, 칵테일 같은 음료의 향</p>
+        <label for="BEVERAGES"></label> 
+        <select name = "scent" id="BEVERAGES">
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="BEVERAGES_1">coca-cola</option>
+            <option value="BEVERAGES_2">whiskey</option>
+            <option value="BEVERAGES_3">rum</option>
+            <option value="BEVERAGES_4">wine</option>
+            <option value="BEVERAGES_5">Champagne</option>
+            <option value="BEVERAGES_6">vodka</option>
+            <option value="BEVERAGES_7">alcohol</option>
+        </select>
+        <div class="help-tip10">
+          <p>coca-cola : 계피, 라임, 레몬, 오렌지, 고수풀, 바닐라, 육두구가 결합된 실제 청량 음료 같은 향<br>whiskey :  오리엔탈, 우디 향수 및 일부 시프레에서 흔히 볼 수 있는 정교하고 따뜻한 향
+            <br>rum : 당밀이 가미된 뉘앙스를 가져오는 복잡하고 달콤한 향<br>wine : 와인을 연상케하는 과일 향<br>Champagne : 톡쏘고 상큼한 향<br>vodka : 무색 무취의 향<br>alcohol : 술의 주 성분이며 무채색 향
+            </p>
+        </div>
+        <br>
+         
+        <style type='text/css'> 
+        .help-tip10{
+          display: inline-block;
+          top: 18px;
+          right: 18px;
+          text-align: center;
+          background-color: #BCDBEA;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          font-size: 14px;
+          line-height: 26px;
+          cursor: default;
+        }
+         
+        .help-tip10:before{
+          content:'?';
+          font-weight: bold;
+          color:#fff;
+        }
+         
+        .help-tip10:hover p{
+          display:block;
+          transform-origin: 100% 0%;
+         
+          -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
+         
+        }
+         
+        .help-tip10 p{
+          display: none;
+          text-align: left;
+          background-color: #1E2021;
+          padding: 20px;
+          width: 300px;
+          position: absolute;
+          border-radius: 3px;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+          right: -4px;
+          color: #FFF;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+         
+        .help-tip10 p:before{
+          position: absolute;
+          content: '';
+          width:0;
+          height: 0;
+          border:6px solid transparent;
+          border-bottom-color:#1E2021;
+          right:10px;
+          top:-12px;
+        }
+         
+        .help-tip10 p:after{
+          width:100%;
+          height:40px;
+          content:'';
+          position: absolute;
+          top:-40px;
+          left:0;
+        }
+         
+        @-webkit-keyframes fadeIn {
+          0% { 
+            opacity:0; 
+            transform: scale(0.6);
+          }
+         
+          100% {
+            opacity:100%;
+            transform: scale(1);
+          }
+        }
+         
+        @keyframes fadeIn {
+          0% { opacity:0; }
+          100% { opacity:100%; }
+        }​ 
+        </style>
+        <br><br>
+
+        <h4><img src="static/img/a12.jpeg"></h4>
+        <p>자연물 및 합성 물질</p>
+        <label for="NATURAL AND SYNTHETIC, POPULAR AND WEIRD"></label> 
+        <select name = "scent" id="NATURAL AND SYNTHETIC, POPULAR AND WEIRD">
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_1">ozonic</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_2">aquatic</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_3">powdery</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_4">smoky</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_5">earthy</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_6">herbal</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_7">fresh</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_8">marine</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_9">salty</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_10">soapy</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_11">metallic</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_12">mineral</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_13">savory</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_14">sand</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_15">industrial glue</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_16">brown scotch tape</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_17">camphor</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_18">asphault</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_19">paper</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_20">varnish</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_21">hot iron</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_22">vinyl</option>
+            <option value="NATURALANDSYNTHETICPOPULARANDWEIRD_23">clay</option>
+          </select>
+          <div class="help-tip11">
+          <p>ozonic : 물이나 공기와 같은 향 <br>aquatic : 이슬, 바다, 빗방울 등을 연상케하는 향<br> powdery : 벨벳과 같은 부드러운 향<br> smoky : 자작나무 타르 다른 향<br>
+            earthy : 이끼, 오리스 뿌리, 베티버같은 향<br> herbal : 우거진 숲, 파릇파릇한 청량한 향<br>fresh : 포근하고 따뜻한 느낌의 향
+            
+            </p>
+        </div>
+        <div class="help-tip12">
+          <p>
+            marine : 깔끔하면서 시원한 향<br>salty : 따뜻한 햇볕이 내리는 바다 향<br>soapy : 고급스러움과 친근한 향<br>
+            metallic : 인공적인 상큼한 향<br>mineral : 추상적인 합성 메모 향<br>
+            savory : 좋은 향기와 자극성 있는 향<br> sand : 편안한 미네랄 향<br> 
+            industçrial glue: 강력하고 합성 느낌의 향
+             
+            </p>
+        </div>
+        <div class="help-tip13">
+          <p>
+            brown scotch tape : 접착제와 플라스틱 향<br>
+             camphor : 단맛과 부패를 자르는 강렬한 향<br>asphault : 휘발성 성분의 화합물의 향<br>paper : 종이 섬유와 같은 향<br>varnish : 휘발성 기름,합성유 향<br> hot iron : 쇠냄새
+             <br>vinyl : 레코와같은 쇠냄새<br>clay : 점토 향
+            </p></div>
+        <br>
+         
+        <style type='text/css'> 
+        .help-tip11{
+          display: inline-block;
+          top: 18px;
+          right: 18px;
+          text-align: center;
+          background-color: #BCDBEA;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          font-size: 14px;
+          line-height: 26px;
+          cursor: default;
+        }
+         
+        .help-tip11:before{
+          content:'?';
+          font-weight: bold;
+          color:#fff;
+        }
+         
+        .help-tip11:hover p{
+          display:block;
+          transform-origin: 100% 0%;
+         
+          -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
+         
+        }
+         
+        .help-tip11 p{
+          display: none;
+          text-align: left;
+          background-color: #1E2021;
+          padding: 20px;
+          width: 300px;
+          position: absolute;
+          border-radius: 3px;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+          right: -4px;
+          color: #FFF;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+         
+        .help-tip11 p:before{
+          position: absolute;
+          content: '';
+          width:0;
+          height: 0;
+          border:6px solid transparent;
+          border-bottom-color:#1E2021;
+          right:10px;
+          top:-12px;
+        }
+         
+        .help-tip11 p:after{
+          width:100%;
+          height:40px;
+          content:'';
+          position: absolute;
+          top:-40px;
+          left:0;
+        }
+         
+        @-webkit-keyframes fadeIn {
+          0% { 
+            opacity:0; 
+            transform: scale(0.6);
+          }
+         
+          100% {
+            opacity:100%;
+            transform: scale(1);
+          }
+        }
+         
+        @keyframes fadeIn {
+          0% { opacity:0; }
+          100% { opacity:100%; }
+        }​ 
+        </style>
+          <br><br>
+
+          <style type='text/css'> 
+        .help-tip12{
+          display: inline-block;
+          top: 18px;
+          right: 18px;
+          text-align: center;
+          background-color: #77bcdf;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          font-size: 14px;
+          line-height: 26px;
+          cursor: default;
+        }
+         
+        .help-tip12:before{
+          content:'?';
+          font-weight: bold;
+          color:#fff;
+        }
+         
+        .help-tip12:hover p{
+          display:block;
+          transform-origin: 100% 0%;
+         
+          -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
+         
+        }
+         
+        .help-tip12 p{
+          display: none;
+          text-align: left;
+          background-color: #1E2021;
+          padding: 20px;
+          width: 300px;
+          position: absolute;
+          border-radius: 3px;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+          right: -4px;
+          color: #FFF;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+         
+        .help-tip12 p:before{
+          position: absolute;
+          content: '';
+          width:0;
+          height: 0;
+          border:6px solid transparent;
+          border-bottom-color:#1E2021;
+          right:10px;
+          top:-12px;
+        }
+         
+        .help-tip12 p:after{
+          width:100%;
+          height:40px;
+          content:'';
+          position: absolute;
+          top:-40px;
+          left:0;
+        }
+         
+        @-webkit-keyframes fadeIn {
+          0% { 
+            opacity:0; 
+            transform: scale(0.6);
+          }
+         
+          100% {
+            opacity:100%;
+            transform: scale(1);
+          }
+        }
+         
+        @keyframes fadeIn {
+          0% { opacity:0; }
+          100% { opacity:100%; }
+        }​ 
+        </style>
+
+        <style type='text/css'> 
+        .help-tip13{
+          display: inline-block;
+          top: 18px;
+          right: 18px;
+          text-align: center;
+          background-color: #49acdd;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          font-size: 14px;
+          line-height: 26px;
+          cursor: default;
+        }
+         
+        .help-tip13:before{
+          content:'?';
+          font-weight: bold;
+          color:#fff;
+        }
+         
+        .help-tip13:hover p{
+          display:block;
+          transform-origin: 100% 0%;
+         
+          -webkit-animation: fadeIn 0.3s ease-in-out;
+          animation: fadeIn 0.3s ease-in-out;
+         
+        }
+         
+        .help-tip13 p{
+          display: none;
+          text-align: left;
+          background-color: #1E2021;
+          padding: 20px;
+          width: 300px;
+          position: absolute;
+          border-radius: 3px;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+          right: -4px;
+          color: #FFF;
+          font-size: 13px;
+          line-height: 1.4;
+        }
+         
+        .help-tip13 p:before{
+          position: absolute;
+          content: '';
+          width:0;
+          height: 0;
+          border:6px solid transparent;
+          border-bottom-color:#1E2021;
+          right:10px;
+          top:-12px;
+        }
+         
+        .help-tip13 p:after{
+          width:100%;
+          height:40px;
+          content:'';
+          position: absolute;
+          top:-40px;
+          left:0;
+        }
+         
+        @-webkit-keyframes fadeIn {
+          0% { 
+            opacity:0; 
+            transform: scale(0.6);
+          }
+         
+          100% {
+            opacity:100%;
+            transform: scale(1);
+          }
+        }
+         
+        @keyframes fadeIn {
+          0% { opacity:0; }
+          100% { opacity:100%; }
+        }​ 
+        </style>
+          <br>
+
+      <!-- 여기서 부터 버튼 꾸민 것-->
+<div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+          <feComposite in="SourceGraphic" in2="goo"/>
+        </filter>
+      </defs>
+    </svg><br>
+    
+    <span class="button--bubble__container">
+      <button type="submit" >
+      <a  class="button button--bubble">
+        다음 질문으로 넘어가기
+      </a>
+    </button>
+      <span class="button--bubble__effect-container">
+        <span class="circle top-left"></span>
+        <span class="circle top-left"></span>
+        <span class="circle top-left"></span>
+    
+        <span class="button effect-button"></span>
+    
+        <span class="circle bottom-right"></span>
+        <span class="circle bottom-right"></span>
+        <span class="circle bottom-right"></span>
+      </span>
+    </span>
+    </div>
+  <style>
+    * {
+    box-sizing: border-box;
+  }
+  
+  
+  .button {
+    -webkit-font-smoothing: antialiased;
+    background-color: #222;
+    border: none;
+    color: #fff;
+    display: inline-block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 100;
+    text-decoration: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    letter-spacing: 1px;
+    color: white;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    transition: all 0.1s ease-out;
+  }
+  .button:hover {
+    background-color: #90feb5;
+    color: #fff;
+  }
+  .button:active {
+    transform: scale(0.95);
+  }
+  .button--bubble {
+    position: relative;
+    z-index: 2;
+    color: white;
+    background: none;
+  }
+  .button--bubble:hover {
+    background: none;
+  }
+  .button--bubble:hover + .button--bubble__effect-container .circle {
+    background: #44fd82;
+  }
+  .button--bubble:hover + .button--bubble__effect-container .button {
+    background: #44fd82;
+  }
+  .button--bubble:active + .button--bubble__effect-container {
+    transform: scale(0.95);
+  }
+  .button--bubble__container {
+    position: relative;
+    display: inline-block;
+  }
+  .button--bubble__container .effect-button {
+    position: absolute;
+    width: 50%;
+    height: 25%;
+    top: 50%;
+    left: 25%;
+    z-index: 1;
+    transform: translateY(-50%);
+    background: #222;
+    transition: background 0.1s ease-out;
+  }
+  
+  .button--bubble__effect-container {
+    position: absolute;
+    display: block;
+    width: 200%;
+    height: 400%;
+    top: -150%;
+    left: -50%;
+    filter: url("#goo");
+    transition: all 0.1s ease-out;
+    pointer-events: none;
+  }
+  .button--bubble__effect-container .circle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    background: #222;
+    transition: background 0.1s ease-out;
+  }
+  .button--bubble__effect-container .circle.top-left {
+    top: 40%;
+    left: 27%;
+  }
+  .button--bubble__effect-container .circle.bottom-right {
+    bottom: 40%;
+    right: 27%;
+  }
+  
+  .goo {
+    position: absolute;
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  
+  .button--bubble__container {
+    top: 50%;
+    margin-top: -25px;
+  }
+  
+  @-webkit-keyframes hue-rotate {
+    from {
+      -moz-filter: hue-rotate(0);
+      -ms-filter: hue-rotate(0);
+      filter: hue-rotate(0);
+    }
+    to {
+      -moz-filter: hue-rotate(360deg);
+      -ms-filter: hue-rotate(360deg);
+      filter: hue-rotate(360deg);
+    }
+  }
+  
+  @keyframes hue-rotate {
+    from {
+      -moz-filter: hue-rotate(0);
+      -ms-filter: hue-rotate(0);
+      filter: hue-rotate(0);
+    }
+    to {
+      -moz-filter: hue-rotate(360deg);
+      -ms-filter: hue-rotate(360deg);
+      filter: hue-rotate(360deg);
+    }
+  }
+  </style>
+  <script>
+    $('.button--bubble').each(function() {
+    var $circlesTopLeft = $(this).parent().find('.circle.top-left');
+    var $circlesBottomRight = $(this).parent().find('.circle.bottom-right');
+  
+    var tl = new TimelineLite();
+    var tl2 = new TimelineLite();
+  
+    var btTl = new TimelineLite({ paused: true });
+  
+    tl.to($circlesTopLeft, 1.2, { x: -25, y: -25, scaleY: 2, ease: SlowMo.ease.config(0.1, 0.7, false) });
+    tl.to($circlesTopLeft.eq(0), 0.1, { scale: 0.2, x: '+=6', y: '-=2' });
+    tl.to($circlesTopLeft.eq(1), 0.1, { scaleX: 1, scaleY: 0.8, x: '-=10', y: '-=7' }, '-=0.1');
+    tl.to($circlesTopLeft.eq(2), 0.1, { scale: 0.2, x: '-=15', y: '+=6' }, '-=0.1');
+    tl.to($circlesTopLeft.eq(0), 1, { scale: 0, x: '-=5', y: '-=15', opacity: 0 });
+    tl.to($circlesTopLeft.eq(1), 1, { scaleX: 0.4, scaleY: 0.4, x: '-=10', y: '-=10', opacity: 0 }, '-=1');
+    tl.to($circlesTopLeft.eq(2), 1, { scale: 0, x: '-=15', y: '+=5', opacity: 0 }, '-=1');
+  
+    var tlBt1 = new TimelineLite();
+    var tlBt2 = new TimelineLite();
+    
+    tlBt1.set($circlesTopLeft, { x: 0, y: 0, rotation: -45 });
+    tlBt1.add(tl);
+  
+    tl2.set($circlesBottomRight, { x: 0, y: 0 });
+    tl2.to($circlesBottomRight, 1.1, { x: 30, y: 30, ease: SlowMo.ease.config(0.1, 0.7, false) });
+    tl2.to($circlesBottomRight.eq(0), 0.1, { scale: 0.2, x: '-=6', y: '+=3' });
+    tl2.to($circlesBottomRight.eq(1), 0.1, { scale: 0.8, x: '+=7', y: '+=3' }, '-=0.1');
+    tl2.to($circlesBottomRight.eq(2), 0.1, { scale: 0.2, x: '+=15', y: '-=6' }, '-=0.2');
+    tl2.to($circlesBottomRight.eq(0), 1, { scale: 0, x: '+=5', y: '+=15', opacity: 0 });
+    tl2.to($circlesBottomRight.eq(1), 1, { scale: 0.4, x: '+=7', y: '+=7', opacity: 0 }, '-=1');
+    tl2.to($circlesBottomRight.eq(2), 1, { scale: 0, x: '+=15', y: '-=5', opacity: 0 }, '-=1');
+    
+    tlBt2.set($circlesBottomRight, { x: 0, y: 0, rotation: 45 });
+    tlBt2.add(tl2);
+  
+    btTl.add(tlBt1);
+    btTl.to($(this).parent().find('.button.effect-button'), 0.8, { scaleY: 1.1 }, 0.1);
+    btTl.add(tlBt2, 0.2);
+    btTl.to($(this).parent().find('.button.effect-button'), 1.8, { scale: 1, ease: Elastic.easeOut.config(1.2, 0.4) }, 1.2);
+  
+    btTl.timeScale(2.6);
+  
+    $(this).on('mouseover', function() {
+      btTl.restart();
+    });
+  });
+  </script>
+  
+  
+              
+      <!-- External JS -->
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+      <script src="vendor/bootstrap/popper.min.js"></script>
+      <script src="vendor/bootstrap/bootstrap.min.js"></script>
+      <script src="vendor/select2/select2.min.js "></script>
+      <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+      <script src="vendor/isotope/isotope.min.js"></script>
+      <script src="vendor/lightcase/lightcase.js"></script>
+      <script src="vendor/waypoints/waypoint.min.js"></script>
+      <script src="vendor/countTo/jquery.countTo.js"></script>
+  
+      <!-- Main JS -->
+      <script src="js/app.min.js "></script>
+      <script src="//localhost:35729/livereload.js"></script>
+  </body>
+  </html>
+  
+  

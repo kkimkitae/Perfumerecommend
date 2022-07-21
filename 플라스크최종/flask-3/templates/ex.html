@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <title>향수 추천 받기</title>
+    <style>
+        h2 {text-align : center;}
+    </style>
+</head>
+<body>
+    <h2>향수 추천 받기</h2><br>
+
+    <h3>Q1 : 선호하는 향을 골라주세요!</h3><br><br>
+
+    <form action="/temp2" method="post">
+
+        {% if too_many %}
+            <p class="alert alert-danger">향은 한 개만 입력해주세요!!!</p>
+        {% elif no_input %}
+            <p class="alert alert-danger">원하는 향을 입력하셔야 됩니다!!</p>
+        {% endif %}
+
+        <h4>CITRUS SMELLS</h4>
+        <p>Most often by citrus in perfumery we describe the whole spectrum of hesperidic fruits (Hesperidia), named after the Hesperides, nymphs from Greek mythology. These are fruits or citrus-smelling raw materials (notably verbena and lemongrass) and a few are among the most ancient ingredients in perfumery alongside resins. The more modern variations, such as pomelo, grapefruit, yuzu and hassaku, are relatively recent developments in the area of perfume extraction.</p>
+        <label for="CITRUS SMELLS">시트러스 계열 향 :</label> 
+        <select name = "temp" id="CITRUS SMELLS">
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="citrus">citrus</option>
+        </select><br><br>
+
+        <h4>FRUITS, VEGETABLES AND NUTS</h4>
+        <p>Fruity notes beyond citrus (which form a class of its own) have become so popular in recent years that they deserve a category of their own. Vegetable notes are more unusual, sometimes rendered through illusion: an example would be the turnip note that iris rhizome sometimes produces.</p>
+        <label for="FRUITS, VEGETABLES AND NUTS">과일, 야채 그리고 견과류 계열 향 :</label> 
+        <select name = "temp" id="FRUITS, VEGETABLES AND NUTS">
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="fruity">fruity</option>
+            <option value="coconut">coconut</option>
+            <option value="cherry">cherry</option>
+            <option value="tropical">tropical</option>
+            <option value="almond">almond</option>
+            <option value="nutty">nutty</option>
+        </select><br><br>
+                
+        <h4>FLOWERS</h4>
+        <p>A self-evident category of fragrance notes, directly smelling of fragrant blossoms, often rich in nuance: from the banana top note of ylang-ylang, the wine nuances in fresh roses and the powdery, almond-like character of heliotrope, to the camphorous side of freshly-picked tuberose, all the way through the apricot scent of osmanthus, the lemony touches of magnolia and the caramelic facets of lavender, flowers can present surprising sides which never cease to fascinate not just insects, but humans as well.</p>
+        <label for="FRUITS, VEGETABLES AND NUTS">꽃 계열 향 :</label> 
+        <select name = "temp" id="FLOWERS">
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="iris">iris</option>
+            <option value="floral">floral</option>
+            <option value="lavender">lavender</option>
+            <option value="rose">rose</option>
+            <option value="violet">violet</option>
+            <option value="tuberose">tuberose</option>
+            <option value="aldehydic">aldehydic</option>
+        </select><br><br>
+
+        <h4>WHITE FLOWERS</h4>
+        <p>This is a subgroup within the Flowers group, but it merits its own entry due to the fact that "white flowers" are the basis for a whole fragrance sub-category: the "white florals." By white flowers, we refer to orange blossom, jasmine, gardenia, tuberose, frangipani. Even though honeysuckle can actually be yellow-colored in nature, its scent profile is not that of yellow flowers (such as mimosa, and it's typified by the sweet, nectarous headiness of white flowers.</p>
+        <label for="FRUITS, VEGETABLES AND NUTS">흰 꽃 계열 향 :</label> 
+        <select name = "temp" id="WHITE FLOWERS"></option>
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="white floral">white floral</option>
+            <option value="yellow floral">yellow floral</option>
+        </select><br><br>
+
+        <h4>GREENS, HERBS AND FOUGERES</h4>
+        <p>By the term "green" we refer to notes of snapped leaves and freshly-cut grasses, which exude a piquant quality. In this classification we find some of the classic pungent essences, such as galbanum, which is actually a resin from a tall type of grass with a bracing, piercingly bitter green odor profile. This is the decidedly spring-like top note of vintage Vent Vert by Balmain where it was first put to use in a starring role.</p>
+        <label for="FRUITS, VEGETABLES AND NUTS">풀, 허브 푸제흐? 계열 향 :</label> 
+        <select name = "temp" id="GREENS, HERBS AND FOUGERES">
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="tobacco">tobacco</option>
+            <option value="green">green</option>
+            <option value="aromatic">aromatic</option>
+            <option value="cannabis">cannabis</option>
+        </select><br><br>
+
+        <h4>SPICES</h4>
+        <p>The Spices group is a familiar category of perfume notes, thanks mainly to their long-standing inclusion in food. Some of them have pride of place in any self-respecting kitchen spice cabinet, such as cinnamon, pepper, cloves, coriander, ginger. Others are more unusual, from the precious hand-picked saffron, to tamarind and caraway and the very gentle, rose-hued pink pepper. True spices are always dried, but there are some herbs which have a spicy tang to them, such as oregano. These can be used both fresh or dry.</p>
+        <label for="FRUITS, VEGETABLES AND NUTS">향신료 계열 향 :</label> 
+        <select name = "temp" id="SPICES">
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="warm spicy">warm spicy</option>
+            <option value="vanilla">vanilla</option>
+            <option value="fresh spicy">fresh spicy</option>
+            <option value="soft spicy">soft spicy</option>
+            <option value="cinnamon">cinnamon</option>
+            <option value="coffee">coffee</option>
+            <option value="cacao">cacao</option>
+            <option value="anis">anis</option>
+        </select><br><br>
+
+        <h4>SWEETS AND GOURMAND SMELLS</h4>
+        <p>This succulent group of scent notes has really established itself and multiplied henceforth with the advent of "gourmand" fragrances, a sub-division of the Oriental fragrance group, in the 1990s and 2000s. These fragrances, largely built on vanilla, are reminiscent of foody smells, specifically sweets and desserts; ranging from the simpler chocolate, fresh cream and caramel smells to complex or more exotic recipes such as macaroons, crème brulée, the ever popular cupcakes and chewy nougat.</p>
+        <label for="FRUITS, VEGETABLES AND NUTS">달고 미식가 계열 향 :</label> 
+        <select name = "temp" id="SWEETS AND GOURMAND SMELLS">
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="sweet">sweet</option>
+            <option value="chocolate">chocolate</option>
+            <option value="honey">honey</option>
+            <option value="caramel">caramel</option>
+        </select><br><br>
+
+        <h4>WOODS AND MOSSES</h4>
+        <p>Woody notes are dependable and pliable, a sort of a Jack in the deck of a skilled perfumer, providing the bottom of a composition and reinforcing the other elements according to their olfactory profile. Precious few of the woody notes can serve as a top note or middle note, namely rosewood.</p>
+        <label for="FRUITS, VEGETABLES AND NUTS">나무와 이끼 계열 향 :</label> 
+        <select name = "temp" id="WOODS AND MOSSES">
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="woody">woody</option>
+            <option value="patchouli">patchouli</option>
+            <option value="oud">oud</option>
+        </select><br><br>
+
+
+        <h4>RESINS AND BALSAMS</h4>
+        <p>The raw materials falling under the umbrella of resins and balsams are among the most ancient components of perfumes, often the basis of the Oriental family of scents. They are classified into different olfactory profiles according to their aromatic properties.</p>
+        <label for="FRUITS, VEGETABLES AND NUTS">레진 그리고 발삼? 향 :</label> 
+        <select name = "temp" id="RESINS AND BALSAMS">
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="balsamic">balsamic</option>
+            <option value="rubber">rubber</option>
+        </select><br><br>
+
+        <h4>MUSK, AMBER, ANIMALIC SMELLS</h4>
+        <p>The term "animalic" refers to both raw aroma materials and "fantasy" notes (derived from synthesis in the lab) which directly evoke a scent reminiscent of animals—either real ones, or more metaphorically, the libidinous nature of our own human animal instincts—and their primal force.</p>
+        <label for="FRUITS, VEGETABLES AND NUTS">머스크, 앰버, 동물적인 향 :</label> 
+        <select name = "temp" id="MUSK, AMBER, ANIMALIC SMELLS">
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="leather">leather</option>
+            <option value="amber">amber</option>
+            <option value="musky">musky</option>
+            <option value="mossy">mossy</option>
+            <option value="animalic">animalic</option>
+            <option value="lactonic">lactonic</option>
+            <option value="beeswax">beeswax</option>
+        </select><br><br>
+
+        <h4>BEVERAGES</h4>
+        <p>Fragrances often recreate the scent of popular beverages in some part of their formula, from the festive fizz of Champagne and the caramelized toasty flavor of Coca Cola, to the tropical delights of Pina Colada or the creaminess of a good cup of cappuccino. These recreations are made possible by:</p>
+        <label for="FRUITS, VEGETABLES AND NUTS">음료 향 :</label> 
+        <select name = "temp" id="BEVERAGES">
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="coca-cola">coca-cola</option>
+            <option value="whiskey">whiskey</option>
+            <option value="rum">rum</option>
+            <option value="wine">wine</option>
+        </select><br><br>
+
+        <h4>NATURAL AND SYNTHETIC, POPULAR AND WEIRD</h4>
+        <p>In this group we place descriptive notes such as powdery, earthy, and some unusual smells which could be found in perfume compositions.</p>
+        <label for="FRUITS, VEGETABLES AND NUTS">자연 추출물이면서 합성적이고 대중적이면서 이상한 계열? 향 :</label> 
+        <select name = "temp" id="NATURAL AND SYNTHETIC, POPULAR AND WEIRD">
+            <option value="">--원하는 향을 골라주세요!!--</option>
+            <option value="ozonic">ozonic</option>
+            <option value="aquatic">aquatic</option>
+            <option value="powdery">powdery</option>
+            <option value="smoky">smoky</option>
+            <option value="earthy">earthy</option>
+            <option value="herbal">herbal</option>
+            <option value="fresh">fresh</option>
+            <option value="marine">marine</option>
+            <option value="salty">salty</option>
+            <option value="soapy">soapy</option>
+            <option value="metallic">metallic</option>
+            <option value="mineral">mineral</option>
+            <option value="savory">savory</option>
+            <option value="sand">sand</option>
+            <option value="industrial glue">industrial glue</option>
+            <option value="brown scotch tape">brown scotch tape</option>
+            <option value="camphor">camphor</option>
+        </select><br><br>
+
+        <button type = "submit">테스트</button>
+    </form>
+
+</body>
+<script>
+</script>
+</html>

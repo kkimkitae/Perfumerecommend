@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>향수 추천</title>
+    <meta name="description" content="Core HTML Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/lightcase/lightcase.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link href="https://file.myfontastic.com/7vRKgqrN3iFEnLHuqYhYuL/icons.css" rel="stylesheet">
+
+    <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+
+</head>
+<body data-spy="scroll" data-target="#navbar-nav-header" class="static-layout">
+	<div class="boxed-page">
+		<nav id="gtco-header-navbar" class="navbar navbar-expand-lg py-4">
+    <div class="container">
+    </div>
+
+    
+
+</nav>
+	<div class="jumbotron d-flex align-items-center" style="background-image: url(static/img/66.jpeg)">
+  <div class="container text-center">
+    <h3><strong>Q2</strong>: 유명 브랜드를 선호하시나요?</h3>
+    <style>
+      h3 {text-align : center;}
+  </style>
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    {% if no_input %}
+        <p class="alert alert-danger"  >원하는 브랜드 가치를 입력하셔야 됩니다!!</p>
+    {% endif %}
+    <form action="/recommend_longevity" method="post">
+        럭셔리 브랜드를 선호함 <input type="radio" name="brand_value" id="luxury" value="luxury"><br><br>
+        럭셔리 브랜드는 아니더라도 인지도가 있는 브랜드였으면 좋겠음 <input type="radio" name="brand_value" id="popular" value="popular"><br><br>
+        브랜드의 인지도는 전혀 상관없음 <input type="radio" name="brand_value" id="normal" value="normal"><br><br><br>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+            <defs>
+              <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+                <feComposite in="SourceGraphic" in2="goo"/>
+              </filter>
+            </defs>
+          </svg>
+          
+          <span class="button--bubble__container">
+            <button><a class="button button--bubble">
+              다음 질문으로 넘어가기
+            </a>
+          </button>
+            <span class="button--bubble__effect-container">
+              <span class="circle top-left"></span>
+              <span class="circle top-left"></span>
+              <span class="circle top-left"></span>
+          
+              <span class="button effect-button"></span>
+          
+              <span class="circle bottom-right"></span>
+              <span class="circle bottom-right"></span>
+              <span class="circle bottom-right"></span>
+            </span>
+          </span>
+          </div>
+        <style>
+          * {
+          box-sizing: border-box;
+        }
+        
+        .button {
+          -webkit-font-smoothing: antialiased;
+          background-color: #222;
+          border: none;
+          color: #fff;
+          display: inline-block;
+          font-family: "Montserrat", sans-serif;
+          font-size: 14px;
+          font-weight: 100;
+          text-decoration: none;
+          -webkit-user-select: none;
+             -moz-user-select: none;
+              -ms-user-select: none;
+                  user-select: none;
+          letter-spacing: 1px;
+          color: white;
+          padding: 20px 40px;
+          text-transform: uppercase;
+          transition: all 0.1s ease-out;
+        }
+        .button:hover {
+          background-color: #90feb5;
+          color: #fff;
+        }
+        .button:active {
+          transform: scale(0.95);
+        }
+        .button--bubble {
+          position: relative;
+          z-index: 2;
+          color: white;
+          background: none;
+        }
+        .button--bubble:hover {
+          background: none;
+        }
+        .button--bubble:hover + .button--bubble__effect-container .circle {
+          background: #44fd82;
+        }
+        .button--bubble:hover + .button--bubble__effect-container .button {
+          background: #44fd82;
+        }
+        .button--bubble:active + .button--bubble__effect-container {
+          transform: scale(0.95);
+        }
+        .button--bubble__container {
+          position: relative;
+          display: inline-block;
+        }
+        .button--bubble__container .effect-button {
+          position: absolute;
+          width: 50%;
+          height: 25%;
+          top: 50%;
+          left: 25%;
+          z-index: 1;
+          transform: translateY(-50%);
+          background: #222;
+          transition: background 0.1s ease-out;
+        }
+        
+        .button--bubble__effect-container {
+          position: absolute;
+          display: block;
+          width: 200%;
+          height: 400%;
+          top: -150%;
+          left: -50%;
+          filter: url("#goo");
+          transition: all 0.1s ease-out;
+          pointer-events: none;
+        }
+        .button--bubble__effect-container .circle {
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          border-radius: 15px;
+          background: #222;
+          transition: background 0.1s ease-out;
+        }
+        .button--bubble__effect-container .circle.top-left {
+          top: 40%;
+          left: 27%;
+        }
+        .button--bubble__effect-container .circle.bottom-right {
+          bottom: 40%;
+          right: 27%;
+        }
+        
+        .goo {
+          position: absolute;
+          visibility: hidden;
+          width: 1px;
+          height: 1px;
+        }
+        
+        html, body {
+          width: 100%;
+          height: 100%;
+          text-align: center;
+        }
+        
+        .button--bubble__container {
+          top: 50%;
+          margin-top: -25px;
+        }
+        
+        @-webkit-keyframes hue-rotate {
+          from {
+            -moz-filter: hue-rotate(0);
+            -ms-filter: hue-rotate(0);
+            filter: hue-rotate(0);
+          }
+          to {
+            -moz-filter: hue-rotate(360deg);
+            -ms-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+          }
+        }
+        
+        @keyframes hue-rotate {
+          from {
+            -moz-filter: hue-rotate(0);
+            -ms-filter: hue-rotate(0);
+            filter: hue-rotate(0);
+          }
+          to {
+            -moz-filter: hue-rotate(360deg);
+            -ms-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+          }
+        }
+        </style>
+        <script>
+          $('.button--bubble').each(function() {
+          var $circlesTopLeft = $(this).parent().find('.circle.top-left');
+          var $circlesBottomRight = $(this).parent().find('.circle.bottom-right');
+        
+          var tl = new TimelineLite();
+          var tl2 = new TimelineLite();
+        
+          var btTl = new TimelineLite({ paused: true });
+        
+          tl.to($circlesTopLeft, 1.2, { x: -25, y: -25, scaleY: 2, ease: SlowMo.ease.config(0.1, 0.7, false) });
+          tl.to($circlesTopLeft.eq(0), 0.1, { scale: 0.2, x: '+=6', y: '-=2' });
+          tl.to($circlesTopLeft.eq(1), 0.1, { scaleX: 1, scaleY: 0.8, x: '-=10', y: '-=7' }, '-=0.1');
+          tl.to($circlesTopLeft.eq(2), 0.1, { scale: 0.2, x: '-=15', y: '+=6' }, '-=0.1');
+          tl.to($circlesTopLeft.eq(0), 1, { scale: 0, x: '-=5', y: '-=15', opacity: 0 });
+          tl.to($circlesTopLeft.eq(1), 1, { scaleX: 0.4, scaleY: 0.4, x: '-=10', y: '-=10', opacity: 0 }, '-=1');
+          tl.to($circlesTopLeft.eq(2), 1, { scale: 0, x: '-=15', y: '+=5', opacity: 0 }, '-=1');
+        
+          var tlBt1 = new TimelineLite();
+          var tlBt2 = new TimelineLite();
+          
+          tlBt1.set($circlesTopLeft, { x: 0, y: 0, rotation: -45 });
+          tlBt1.add(tl);
+        
+          tl2.set($circlesBottomRight, { x: 0, y: 0 });
+          tl2.to($circlesBottomRight, 1.1, { x: 30, y: 30, ease: SlowMo.ease.config(0.1, 0.7, false) });
+          tl2.to($circlesBottomRight.eq(0), 0.1, { scale: 0.2, x: '-=6', y: '+=3' });
+          tl2.to($circlesBottomRight.eq(1), 0.1, { scale: 0.8, x: '+=7', y: '+=3' }, '-=0.1');
+          tl2.to($circlesBottomRight.eq(2), 0.1, { scale: 0.2, x: '+=15', y: '-=6' }, '-=0.2');
+          tl2.to($circlesBottomRight.eq(0), 1, { scale: 0, x: '+=5', y: '+=15', opacity: 0 });
+          tl2.to($circlesBottomRight.eq(1), 1, { scale: 0.4, x: '+=7', y: '+=7', opacity: 0 }, '-=1');
+          tl2.to($circlesBottomRight.eq(2), 1, { scale: 0, x: '+=15', y: '-=5', opacity: 0 }, '-=1');
+          
+          tlBt2.set($circlesBottomRight, { x: 0, y: 0, rotation: 45 });
+          tlBt2.add(tl2);
+        
+          btTl.add(tlBt1);
+          btTl.to($(this).parent().find('.button.effect-button'), 0.8, { scaleY: 1.1 }, 0.1);
+          btTl.add(tlBt2, 0.2);
+          btTl.to($(this).parent().find('.button.effect-button'), 1.8, { scale: 1, ease: Elastic.easeOut.config(1.2, 0.4) }, 1.2);
+        
+          btTl.timeScale(2.6);
+        
+          $(this).on('mouseover', function() {
+            btTl.restart();
+          });
+        });
+        </script>
+            </form>
+            </form>
+          </div>
+        </div>		
+        
+                    
+          
+            <!-- External JS -->
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+            <script src="vendor/bootstrap/popper.min.js"></script>
+            <script src="vendor/bootstrap/bootstrap.min.js"></script>
+            <script src="vendor/select2/select2.min.js "></script>
+            <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+            <script src="vendor/isotope/isotope.min.js"></script>
+            <script src="vendor/lightcase/lightcase.js"></script>
+            <script src="vendor/waypoints/waypoint.min.js"></script>
+            <script src="vendor/countTo/jquery.countTo.js"></script>
+        
+            <!-- Main JS -->
+            <script src="js/app.min.js "></script>
+            <script src="//localhost:35729/livereload.js"></script>
+        </body>
+        </html>

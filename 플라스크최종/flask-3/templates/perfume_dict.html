@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>향수 추천</title>
+
+    <title>향수 관련 용어 사전</title>
+    <style>
+        h2 {text-align : center;}
+    </style>
+</head>
+<body>
+    <h1>Perfume Term</h1>
+
+    <div class="accordion">
+
+        <!-- BOX 1 -->
+        <div class="box a1">
+            <div class="image_1">
+                <div class="text">
+                    <p>향수의 메인 어코드는 주제나 향기가 들려줄 이야기를 밝히고, 향수의 분류를 알려줍니다. 향수는  탑 노트, 미들 노트, 또는 베이스 노트에 위치할 수도 있고, 향수를 탑 노트부터 베이스 노트까지 모두 걸쳐있을 수 있습니다.
+                      몇몇 메인 어코드는 향수 역사의 이정표이며, 적어도 60년에 걸친 수백 개의 성공적인 향수의 존재를 특징으로 합니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOX 2 -->
+        <div class="box a2">
+            <div class="image_2">
+                <div class="text">
+                    <p>
+                      <p>상향, 헤드 노트라고도 불린다. 가장 빨리 느껴짐과 동시에 가장 빨리 증발하는 향으로, 증발이 빠른 가벼운 분자량의 성분들을 말한다. 뿌리자마자 바로 맡게 되는 향이라 향의 첫인상에 해당하며 제품 판매에서 대단히 중요합니다. 왜냐하면 소비자의 제품에 대한 첫인상을 결정짓는 향이기 때문입니다.</p>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOX 3 -->
+        <div class="box a3">
+            <div class="image_3">
+                <div class="text">
+                    <p>
+                      중향, 하트 노트라고도 불린다. 첫 향인 탑 노트가 사라지면서 나는 향이며 향수의 중간 부분을 담당하는 안정되고 조화로운 향이며 베이스 노트와 함께 해당 향수의 기반이 된다. 하지만 지속시간이 길지않고, 정확한 중간 향을 구별해내기 어려워서 주로 탑과 베이스를 보고 구매합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOX 1 -->
+        <div class="box a4">
+            <div class="image_4">
+                <div class="text">
+                    <p>
+                      하향, 바텀 노트라고도 불린다. 크고 무거운 분자들로 구성되어 있어 한참 후에 천천히 올라오는 향이며 가장 나중에 느껴지는 향이자 가장 오래 남는 향으로, 향의 기본 품질과 성격, 지속성에 영향을 미치는 향입니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOX 5 -->
+        <div class="box a5">
+            <div class="image_5">
+                <div class="text">
+                    
+                </div>
+            </div>
+        </div>
+
+  
+
+    </div>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+html {
+    height: 200vh;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Fjalla One', sans-serif;
+    background: linear-gradient( #fff, #fefefe, #eaeaea);
+}
+.accordion {
+    max-width: 990px;
+    background: rgba(0, 0, 0, 0.10);
+    height: 300px;
+    margin: 20px auto;
+    display: flex;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
+    flex-direction: row;
+    cursor: pointer;
+    margin-bottom: 100px;
+}
+.box {
+    position: relative;
+    height: 100%;
+    flex: 1;
+    background-position: left;
+    background-size: cover;
+    transition: .7s;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.47);
+}
+.box:hover{
+    flex: 7;
+    height: 400px;
+}
+.a1 {
+    background-image: url(static/img/P1_mainaccord.jpg);
+    color: #fff;
+}
+.a2 {
+    background-image: url(static/img/P2_top.jpg);
+    color: #fff;
+    
+}
+.a3 {
+    background-image: url(static/img/P1_middlenote.jpg);
+    color: #fff;
+}
+.a4 {
+    background-image: url(static/img/P2_base.jpg);
+    color: #fff;
+}
+.a5 {
+    background-image: url(static/img/ㅊㅊ.jpeg); 
+}
+
+p {
+    font-weight: normal;
+    font-family: 'Exo 2', sans-serif;
+}
+.text {
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    padding: 10px;
+}
+.box:hover .text{
+    opacity:1;
+}
+h1 {
+    width: 250px;
+    text-align: center;
+    margin: 100px auto 20px auto;
+}
+@media screen and (max-width: 800px){
+    body{
+        margin: 0;
+    }
+    .accordion {
+        flex-direction: column;
+        height: 700px;
+        box-shadow: none;
+    }
+    .box {
+        box-shadow: none;
+    }
+    .box:hover {
+        flex: 7;
+    }
+}
+</style>
+
+
+    <br>
+    <form action="/" method="get">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="goo">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+            <feComposite in="SourceGraphic" in2="goo"/>
+          </filter>
+        </defs>
+      </svg>
+      
+      <span class="button--bubble__container">
+        <button type = "submit"><a class="button button--bubble">
+          홈으로가기
+        </a>
+      </button>
+        <span class="button--bubble__effect-container">
+          <span class="circle top-left"></span>
+          <span class="circle top-left"></span>
+          <span class="circle top-left"></span>
+      
+          <span class="button effect-button"></span>
+      
+          <span class="circle bottom-right"></span>
+          <span class="circle bottom-right"></span>
+          <span class="circle bottom-right"></span>
+        </span>
+      </span>
+      </div>
+    <style>
+      * {
+      box-sizing: border-box;
+    }
+    
+    .button {
+      -webkit-font-smoothing: antialiased;
+      background-color: #222;
+      border: none;
+      color: #fff;
+      display: inline-block;
+      font-family: "Montserrat", sans-serif;
+      font-size: 14px;
+      font-weight: 100;
+      text-decoration: none;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      letter-spacing: 1px;
+      color: white;
+      padding: 20px 40px;
+      text-transform: uppercase;
+      transition: all 0.1s ease-out;
+    }
+    .button:hover {
+      background-color: #90feb5;
+      color: #fff;
+    }
+    .button:active {
+      transform: scale(0.95);
+    }
+    .button--bubble {
+      position: relative;
+      z-index: 2;
+      color: white;
+      background: none;
+    }
+    .button--bubble:hover {
+      background: none;
+    }
+    .button--bubble:hover + .button--bubble__effect-container .circle {
+      background: #44fd82;
+    }
+    .button--bubble:hover + .button--bubble__effect-container .button {
+      background: #44fd82;
+    }
+    .button--bubble:active + .button--bubble__effect-container {
+      transform: scale(0.95);
+    }
+    .button--bubble__container {
+      position: relative;
+      display: inline-block;
+    }
+    .button--bubble__container .effect-button {
+      position: absolute;
+      width: 50%;
+      height: 25%;
+      top: 50%;
+      left: 25%;
+      z-index: 1;
+      transform: translateY(-50%);
+      background: #222;
+      transition: background 0.1s ease-out;
+    }
+    
+    .button--bubble__effect-container {
+      position: absolute;
+      display: block;
+      width: 200%;
+      height: 400%;
+      top: -150%;
+      left: -50%;
+      filter: url("#goo");
+      transition: all 0.1s ease-out;
+      pointer-events: none;
+    }
+    .button--bubble__effect-container .circle {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      border-radius: 15px;
+      background: #222;
+      transition: background 0.1s ease-out;
+    }
+    .button--bubble__effect-container .circle.top-left {
+      top: 40%;
+      left: 27%;
+    }
+    .button--bubble__effect-container .circle.bottom-right {
+      bottom: 40%;
+      right: 27%;
+    }
+    
+    .goo {
+      position: absolute;
+      visibility: hidden;
+      width: 1px;
+      height: 1px;
+    }
+    
+    html, body {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+    
+    .button--bubble__container {
+      top: 50%;
+      margin-top: -25px;
+    }
+    
+    @-webkit-keyframes hue-rotate {
+      from {
+        -moz-filter: hue-rotate(0);
+        -ms-filter: hue-rotate(0);
+        filter: hue-rotate(0);
+      }
+      to {
+        -moz-filter: hue-rotate(360deg);
+        -ms-filter: hue-rotate(360deg);
+        filter: hue-rotate(360deg);
+      }
+    }
+    
+    @keyframes hue-rotate {
+      from {
+        -moz-filter: hue-rotate(0);
+        -ms-filter: hue-rotate(0);
+        filter: hue-rotate(0);
+      }
+      to {
+        -moz-filter: hue-rotate(360deg);
+        -ms-filter: hue-rotate(360deg);
+        filter: hue-rotate(360deg);
+      }
+    }
+    </style>
+    <script>
+      $('.button--bubble').each(function() {
+      var $circlesTopLeft = $(this).parent().find('.circle.top-left');
+      var $circlesBottomRight = $(this).parent().find('.circle.bottom-right');
+    
+      var tl = new TimelineLite();
+      var tl2 = new TimelineLite();
+    
+      var btTl = new TimelineLite({ paused: true });
+    
+      tl.to($circlesTopLeft, 1.2, { x: -25, y: -25, scaleY: 2, ease: SlowMo.ease.config(0.1, 0.7, false) });
+      tl.to($circlesTopLeft.eq(0), 0.1, { scale: 0.2, x: '+=6', y: '-=2' });
+      tl.to($circlesTopLeft.eq(1), 0.1, { scaleX: 1, scaleY: 0.8, x: '-=10', y: '-=7' }, '-=0.1');
+      tl.to($circlesTopLeft.eq(2), 0.1, { scale: 0.2, x: '-=15', y: '+=6' }, '-=0.1');
+      tl.to($circlesTopLeft.eq(0), 1, { scale: 0, x: '-=5', y: '-=15', opacity: 0 });
+      tl.to($circlesTopLeft.eq(1), 1, { scaleX: 0.4, scaleY: 0.4, x: '-=10', y: '-=10', opacity: 0 }, '-=1');
+      tl.to($circlesTopLeft.eq(2), 1, { scale: 0, x: '-=15', y: '+=5', opacity: 0 }, '-=1');
+    
+      var tlBt1 = new TimelineLite();
+      var tlBt2 = new TimelineLite();
+      
+      tlBt1.set($circlesTopLeft, { x: 0, y: 0, rotation: -45 });
+      tlBt1.add(tl);
+    
+      tl2.set($circlesBottomRight, { x: 0, y: 0 });
+      tl2.to($circlesBottomRight, 1.1, { x: 30, y: 30, ease: SlowMo.ease.config(0.1, 0.7, false) });
+      tl2.to($circlesBottomRight.eq(0), 0.1, { scale: 0.2, x: '-=6', y: '+=3' });
+      tl2.to($circlesBottomRight.eq(1), 0.1, { scale: 0.8, x: '+=7', y: '+=3' }, '-=0.1');
+      tl2.to($circlesBottomRight.eq(2), 0.1, { scale: 0.2, x: '+=15', y: '-=6' }, '-=0.2');
+      tl2.to($circlesBottomRight.eq(0), 1, { scale: 0, x: '+=5', y: '+=15', opacity: 0 });
+      tl2.to($circlesBottomRight.eq(1), 1, { scale: 0.4, x: '+=7', y: '+=7', opacity: 0 }, '-=1');
+      tl2.to($circlesBottomRight.eq(2), 1, { scale: 0, x: '+=15', y: '-=5', opacity: 0 }, '-=1');
+      
+      tlBt2.set($circlesBottomRight, { x: 0, y: 0, rotation: 45 });
+      tlBt2.add(tl2);
+    
+      btTl.add(tlBt1);
+      btTl.to($(this).parent().find('.button.effect-button'), 0.8, { scaleY: 1.1 }, 0.1);
+      btTl.add(tlBt2, 0.2);
+      btTl.to($(this).parent().find('.button.effect-button'), 1.8, { scale: 1, ease: Elastic.easeOut.config(1.2, 0.4) }, 1.2);
+    
+      btTl.timeScale(2.6);
+    
+      $(this).on('mouseover', function() {
+        btTl.restart();
+      });
+    });
+    </script>
+        </form>
+        </form>
+      </div>
+    </div>		
+    
+        <!-- External JS -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+        <script src="vendor/bootstrap/popper.min.js"></script>
+        <script src="vendor/bootstrap/bootstrap.min.js"></script>
+        <script src="vendor/select2/select2.min.js "></script>
+        <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+        <script src="vendor/isotope/isotope.min.js"></script>
+        <script src="vendor/lightcase/lightcase.js"></script>
+        <script src="vendor/waypoints/waypoint.min.js"></script>
+        <script src="vendor/countTo/jquery.countTo.js"></script>
+    
+        <!-- Main JS -->
+        <script src="js/app.min.js "></script>
+        <script src="//localhost:35729/livereload.js"></script>
+    </body>
+    </html>
+    

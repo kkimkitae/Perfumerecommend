@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>  
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.js"></script>  
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css"/>  
+<head>
+    <meta charset="UTF-8">
+    <title>향수로 향수 추천</title>
+    <style>
+        h2 {text-align : center;}
+    </style>
+</head>
+<style>
+    @import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+    
+    h2{
+         font-family: 'Nanum Pen Script', cursive;
+    }
+</style>
+<body>  
+      <div class="container" id = "content">
+        <h2>비슷한 향수 찾기!!!</h2><br>
+            <div class="row height d-flex justify-content-center align-items-center">
+              <div class="col-md-8">
+                <div class="search1">
+                  <i class="fa fa-search"></i>
+            <form action = "/recommend_by_perfume" method = "post">
+                <input class="form-control" type="search" id="tags" name="perfume_name" placeholder="찾고자 하는 향수의 이름를 입력해주세요!!!">
+                <button type = "submit" class="btn btn-primary">향수 찾기</button>
+            </form>
+              </div>
+            </div>
+          </div>
+    <!-- 여기 -->
+    {%if no_that_perfume%}
+    <p class="alert alert-danger">그런 향수는 없습니다!!! 다시 한 번 정확히 입력해주세요</p>
+    {%endif%}
+
+    {%if found_perfume%}
+        <table class="table table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">향수 이미지</th>
+                    <th scope="col">향수 이름</th>
+                    <th scope="col">향수 브랜드</th>
+                    <th scope="col">향수 출시연도</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            {%for p in found_perfume%}
+                <tr>
+                    <form action = "/recommend_by_perfume/result" method="post">
+                        <td scope="col"><input type="image" src = "{{url_for('static', filename = img)}}" alt = "submit" width="50%" height="50%"></td>
+                        <!-- <td class="col-4"><input type="image" src = "https://fimgs.net/mdimg/perfume/375x500.20003.jpg" width="50%" height="50%"></td> -->
+                        <td scope="col">{{p.perfume_name}}</td>
+                        <td scope="col">{{p.brand}}</td>
+                        <td scope="col">{{p.launch_year}}</td>
+                        <td scope="col"><button class = "btn btn-primary" type = "submit" onclick="loading();">이 향수와 비슷한 향수들 추천 받기</button></td>
+                        <input type = "hidden" name = "id" value = "{{p.id}}">
+                    </form>
+                </tr>
+            {%endfor%}
+        </table>
+    {%endif%}<br><br>
+
+  <!-- 버튼임  -->
+  <form action="/to_home" method="get">
+    <div class="button-container-1">
+      <span class="mas">Home</span>
+      <button type="submit" name="Hover" >Home</button>
+    </div>
+  </form>
+
+</div><br>
+
+<!-- 검색 창 css-->
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
+    body{
+     background-color:#eee;
+     font-family: "Poppins", sans-serif;
+     font-weight: 300;
+    }
+    .search1{
+    position: relative;
+    box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+    }
+    .search1 input{
+     height: 60px;
+     text-indent: 25px;
+     border: 2px solid #d6d4d4;
+    }
+    .search1 input:focus{
+     box-shadow: none;
+     border: 2px solid blue;
+    }
+    .search1 .fa-search{
+     position: absolute;
+     top: 20px;
+     left: 16px;
+    }
+    .search1 button{
+     position: absolute;
+     top: 5px;
+     right: 5px;
+     height: 50px;
+     width: 110px;
+     background: blue;
+    }
+        </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400");
+      @import url("https://fonts.googleapis.com/css?family=Roboto:100");
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .header {
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      font-size: 34px;
+      margin-top: 12vh;
+    }
+    
+    .footer {
+      text-align: center;
+      font-family: "Lato", sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      margin-top: 15vh;
+    }
+    
+    .button-container-1 {
+      position: relative;
+      width: 100px;
+      height: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 6vh;
+      overflow: hidden;
+      border: 1px solid;
+      font-family: "Lato", sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      transition: 0.5s;
+      letter-spacing: 1px;
+      border-radius: 8px;
+    }
+    .button-container-1 button {
+      width: 101%;
+      height: 100%;
+      font-family: "Lato", sans-serif;
+      font-weight: 300;
+      font-size: 11px;
+      letter-spacing: 1px;
+      font-weight: bold;
+      background: #000;
+      -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+      mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+      -webkit-mask-size: 2300% 100%;
+      mask-size: 2300% 100%;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      -webkit-animation: ani2 0.7s steps(22) forwards;
+      animation: ani2 0.7s steps(22) forwards;
+    }
+    .button-container-1 button:hover {
+      -webkit-animation: ani 0.7s steps(22) forwards;
+      animation: ani 0.7s steps(22) forwards;
+    }
+    
+    .button-container-2 {
+      position: relative;
+      width: 100px;
+      height: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 7vh;
+      overflow: hidden;
+      border: 1px solid #000;
+      font-family: "Lato", sans-serif;
+      font-weight: 300;
+      transition: 0.5s;
+      letter-spacing: 1px;
+      border-radius: 8px;
+    }
+    .button-container-2 button {
+      width: 101%;
+      height: 100%;
+      font-family: "Lato", sans-serif;
+      font-weight: 300;
+      font-size: 11px;
+      letter-spacing: 1px;
+      font-weight: bold;
+      background: #000;
+      -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+      mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/urban-sprite.png");
+      -webkit-mask-size: 3000% 100%;
+      mask-size: 3000% 100%;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      -webkit-animation: ani2 0.7s steps(29) forwards;
+      animation: ani2 0.7s steps(29) forwards;
+    }
+    .button-container-2 button:hover {
+      -webkit-animation: ani 0.7s steps(29) forwards;
+      animation: ani 0.7s steps(29) forwards;
+    }
+    
+    .mas {
+      position: absolute;
+      color: #000;
+      text-align: center;
+      width: 101%;
+      font-family: "Lato", sans-serif;
+      font-weight: 300;
+      position: absolute;
+      font-size: 11px;
+      margin-top: 17px;
+      overflow: hidden;
+      font-weight: bold;
+    }
+    
+    @-webkit-keyframes ani {
+      from {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+      }
+      to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+      }
+    }
+    @keyframes ani {
+      from {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+      }
+      to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+      }
+    }
+    @-webkit-keyframes ani2 {
+      from {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+      }
+      to {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+      }
+    }
+    @keyframes ani2 {
+      from {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+      }
+      to {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+      }
+    }
+    a {
+      color: #00ff95;
+    }
+    
+    .button-container-3 {
+      position: relative;
+      width: 100px;
+      height: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 8vh;
+      overflow: hidden;
+      border: 1px solid #000;
+      font-family: "Lato", sans-serif;
+      font-weight: 300;
+      transition: 0.5s;
+      letter-spacing: 1px;
+      border-radius: 8px;
+    }
+    .button-container-3 button {
+      width: 101%;
+      height: 100%;
+      font-family: "Lato", sans-serif;
+      font-weight: 300;
+      font-size: 11px;
+      letter-spacing: 1px;
+      font-weight: bold;
+      background: #000;
+      -webkit-mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+      mask: url("https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png");
+      -webkit-mask-size: 7100% 100%;
+      mask-size: 7100% 100%;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      -webkit-animation: ani2 0.7s steps(70) forwards;
+      animation: ani2 0.7s steps(70) forwards;
+    }
+    .button-container-3 button:hover {
+      -webkit-animation: ani 0.7s steps(70) forwards;
+      animation: ani 0.7s steps(70) forwards;
+    }
+    </style>
+    
+    <div class = "row text-center align-items-center" id="loading" style="height: 800px; display:none;">
+        <div class = "col-12">
+            <span class="text-primary" style="font-size: 30px">향수를 추천 중입니다!! 잠시만 기다려주세요!!</span><br>
+            <img src="https://media3.giphy.com/media/3y0oCOkdKKRi0/200.webp?cid=ecf05e47jvcqwtq2frw8j1mcaj0adu366docg1yfbhzshisi&rid=200.webp&ct=g" style="width: 40%; height: 40%;" alt=""/>         
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    function loading(){
+        $("#loading").show();
+        $("#content").hide();       
+    };
+
+    $( function() {
+        let perfumes = JSON.parse('{{ perfumes | tojson }}');
+        console.log(perfumes)
+
+      $("#tags").autocomplete({
+        source: perfumes
+      });
+    });
+</script>
+</html>
