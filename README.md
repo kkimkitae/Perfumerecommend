@@ -37,6 +37,14 @@ img파일 약 1.2기가 flask-3/static/   https://drive.google.com/file/d/1FU0sj
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/85480964/180190171-ad2c8039-485d-4392-87af-cd9d966dd489.png">
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/85480964/180190188-9fc097d7-0bc0-4354-b894-904f86fbfc86.png">
 
+## 4. 데이터 수집 과정
+<img width="350" alt="image" src="https://user-images.githubusercontent.com/85480964/180190575-e9c1c236-339f-4819-b3c2-9fe916cddb35.png">
+<img width="350" alt="image" src="https://user-images.githubusercontent.com/85480964/180190591-76b81767-5af2-41d1-986a-9724d1f4ff5a.png">
+<img width="350" alt="image" src="https://user-images.githubusercontent.com/85480964/180190631-b142a68d-6e83-47f9-b6c3-4df3f58b00f1.png">
+<img width="150" alt="image" src="https://user-images.githubusercontent.com/85480964/180190683-8266f350-bdaa-4ab0-b22b-9d82eda6a88b.png">
+selenium 라이브러리를 이용하여 웹 최대 규모 향수 사이트인 fragrantica를 대상으로 향수 데이터를 크롤링하였으며, 적당한 전처리 후 약 25000개의 데이터가 모였고, 해당 데이터를 데이터베이스에 적재하였습니다.
+
+
 
 
 
