@@ -101,7 +101,7 @@ selenium 라이브러리를 이용하여 웹 최대 규모 향수 사이트인 f
  
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/85480964/180198379-6ccbcf0c-cfbd-478a-919e-11c874f5a480.png">
 
- • 4
+ • 4 계절감 선택
  
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/85480964/180198433-2e3ea52c-6933-4f28-895d-f8bd3e3b5a63.png">
 
