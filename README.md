@@ -6,10 +6,8 @@ img파일 약 1.2기가 flask-3/static/   https://drive.google.com/file/d/1FU0sj
 
 
 <hr>
-## 흥보물
+흥보물
 <img width="311" alt="image" src="https://user-images.githubusercontent.com/85480964/180188576-288c8a72-21a9-4d29-8877-3a954f1ccf70.png">
-
-
 
 
 ## 0. 팀 소개
