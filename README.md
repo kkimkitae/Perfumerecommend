@@ -58,7 +58,7 @@ input vector와 저희가 데이터베이스에 가지고 있는 향수 데이�
 <img width="350" alt="image" src="https://user-images.githubusercontent.com/85480964/180190631-b142a68d-6e83-47f9-b6c3-4df3f58b00f1.png">
 <img width="150" alt="image" src="https://user-images.githubusercontent.com/85480964/180190683-8266f350-bdaa-4ab0-b22b-9d82eda6a88b.png">
 selenium 라이브러리를 이용하여 웹 최대 규모 향수 사이트인 fragrantica를 대상으로 향수 데이터를 크롤링하였으며, 적당한 전처리 후 약 25000개의 데이터가 모였고, 
-약 24545개의 데이터를 데이터베이스에 적재하였습니다.
+데이터를 데이터베이스에 적재하였습니다.
 
 ## 5. Front
 
