@@ -63,6 +63,10 @@ selenium 라이브러리를 이용하여 웹 최대 규모 향수 사이트인 f
  
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/85480964/180186908-ffc5d0b1-47a7-4a20-ab34-1d8472355241.png">
 
+ • 향수 용어 사전
+ 
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/85480964/180196899-c03ca77f-d394-4617-a286-49365b790559.png">
+
  • 향수로 향수 추천 받기
  
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/85480964/180196775-dec651f0-d595-4ff9-a906-711a117843c0.png">
@@ -71,7 +75,8 @@ selenium 라이브러리를 이용하여 웹 최대 규모 향수 사이트인 f
  
 <img width="500" alt="image" src="https://user-images.githubusercontent.com/85480964/180196820-3bd4d356-d697-4ff5-9425-685f2e7c79ce.png">
 
- • 향수 용어 사전
+ • 추천 서비스
  
-<img width="400" alt="image" src="https://user-images.githubusercontent.com/85480964/180196899-c03ca77f-d394-4617-a286-49365b790559.png">
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/85480964/180197219-c1106657-e56e-420f-bada-b3a6de0b3f16.png">
+
 
