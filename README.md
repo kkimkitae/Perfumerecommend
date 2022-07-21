@@ -4,7 +4,19 @@
 
 img파일 약 1.2기가 flask-3/static/   https://drive.google.com/file/d/1FU0sj5oh_B_kFGHHBzxfdkJskVd0UuAa/view?usp=sharing
 
-서비스의 목적 및 가치
+
+<hr>
+## 0. 팀 소개
+
+![멤버 이미지](/images/all.png)
+
+* **팀장** 이경호 : 프론트엔드 / PM / 백엔드
+* 팀원 양혜진 : 백엔드
+* 팀원 박홍은 : 데이터분석 / 백엔드
+* 팀원 이해인 : 디자인 / 프론트엔드
+* 팀원 남승현 : 데이터분석
+
+## 1. 서비스의 목적 및 가치
 
 
 • 향수를 일상적인 액세서리로 보는 시간이 확산되면서 향수를 뿌리는 소비자가 많아지는 추세
