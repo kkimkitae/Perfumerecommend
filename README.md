@@ -60,7 +60,7 @@ input vector와 저희가 데이터베이스에 가지고 있는 향수 데이�
 selenium 라이브러리를 이용하여 웹 최대 규모 향수 사이트인 fragrantica를 대상으로 향수 데이터를 크롤링하였으며, 적당한 전처리 후 약 25000개의 데이터가 모였고, 
 데이터를 데이터베이스에 적재하였습니다.
 
-## 5. Front
+## 5. 프론트
 
 봄:향은 크게 네가지 서비스를 제공합니다. 
 답변을 통한 향수 추천받기, 향수 초심자에게 낯선 용어들이 정리된 향수 용어 사전, 향수 검색하기, 향수 명을 입력하면 비슷한 향수를 추천받는 비슷한 향수 찾기입니다. 
@@ -120,7 +120,7 @@ selenium 라이브러리를 이용하여 웹 최대 규모 향수 사이트인 f
 <img width="405" alt="image" src="https://user-images.githubusercontent.com/85480964/180201818-64655112-7618-4e29-b0e8-8b6f048de35c.png">
 
 
-## 6. Back
+## 6. 
 
 <img width="360" alt="image" src="https://user-images.githubusercontent.com/85480964/180200039-1f4a82fd-6e5d-4945-8849-a9354168ebc1.png">
 
